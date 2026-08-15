@@ -3,174 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KaamSetu — Kaam Dhoondo, Kaam Do</title>
+<title>Bharat SkillLink — Skilled Hands. Real Jobs.</title>
 <style>
   :root{
-    --ink:#1b2733;
-    --paper:#faf7f2;
+    --ink:#182530;
+    --paper:#f7f6f1;
     --card:#ffffff;
-    --orange:#f4652a;
-    --orange-dark:#d94f17;
-    --blue:#1f5aa8;
-    --blue-soft:#e8f0fa;
-    --green:#1e8e5a;
-    --green-soft:#e4f4ec;
-    --line:#e8e2d8;
-    --muted:#6b7683;
+    --saffron:#e8611a;
+    --saffron-dark:#c74d0e;
+    --navy:#154a8a;
+    --navy-soft:#e7eef8;
+    --green:#1a7f52;
+    --green-soft:#e2f2ea;
+    --line:#e6e1d6;
+    --muted:#67727e;
     --radius:18px;
-    --shadow:0 2px 10px rgba(27,39,51,.07);
+    --shadow:0 2px 10px rgba(24,37,48,.07);
   }
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   body{font-family:-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Sans Devanagari',sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
   button{font-family:inherit;cursor:pointer;border:none}
   input,select,textarea{font-family:inherit;font-size:16px}
-  .wrap{max-width:960px;margin:0 auto;padding:0 16px}
+  .wrap{max-width:980px;margin:0 auto;padding:0 16px}
 
-  /* ---------- header ---------- */
   header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:2px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:8px}
   .logo{display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none}
-  .logo-mark{width:42px;height:42px;background:var(--orange);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 3px 0 var(--orange-dark)}
-  .logo b{font-size:21px;letter-spacing:-.5px}
-  .logo b span{color:var(--orange)}
+  .logo-mark{width:42px;height:42px;background:linear-gradient(160deg,var(--saffron) 55%,var(--green) 55%);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:21px;box-shadow:0 3px 0 var(--saffron-dark)}
+  .logo b{font-size:20px;letter-spacing:-.5px}
+  .logo b span{color:var(--saffron)}
+  .logo small{display:block;font-size:10.5px;color:var(--muted);font-weight:600;letter-spacing:.2px;margin-top:-2px}
   .nav-links{display:flex;gap:6px;align-items:center}
   .nav-btn{background:transparent;padding:10px 14px;border-radius:12px;font-size:15px;font-weight:600;color:var(--ink)}
-  .nav-btn:hover{background:var(--blue-soft)}
-  .nav-btn.primary{background:var(--blue);color:#fff;box-shadow:0 3px 0 #164379}
-  .nav-btn.primary:hover{background:#2566b8}
+  .nav-btn:hover{background:var(--navy-soft)}
+  .nav-btn.primary{background:var(--navy);color:#fff;box-shadow:0 3px 0 #0e3462}
   .nav-btn.active{background:var(--ink);color:#fff}
-  .lang-btn{background:var(--card);border:2px solid var(--line);border-radius:99px;padding:8px 14px;font-size:14px;font-weight:700;color:var(--blue)}
-  .lang-btn:hover{border-color:var(--blue)}
+  .lang-btn{background:var(--card);border:2px solid var(--line);border-radius:99px;padding:8px 14px;font-size:14px;font-weight:700;color:var(--navy)}
+  .lang-btn:hover{border-color:var(--navy)}
 
-  /* ---------- views ---------- */
   .view{display:none;animation:fade .25s ease}
   .view.on{display:block}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
-  /* ---------- hero ---------- */
-  .hero{padding:44px 0 30px;text-align:center}
+  .hero{padding:42px 0 28px;text-align:center}
+  .hero .flag-line{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:2px solid var(--line);border-radius:99px;padding:6px 16px;font-size:13.5px;font-weight:700;color:var(--muted);margin-bottom:18px}
   .hero h1{font-size:clamp(28px,5.5vw,46px);letter-spacing:-1px;line-height:1.15}
-  .hero h1 em{font-style:normal;color:var(--orange);white-space:nowrap}
-  .hero p{margin-top:12px;color:var(--muted);font-size:17px}
-  .hero .hindi{display:inline-block;margin-top:6px;font-size:15px;color:var(--blue);background:var(--blue-soft);padding:4px 14px;border-radius:99px;font-weight:600}
+  .hero h1 em{font-style:normal;color:var(--saffron);white-space:nowrap}
+  .hero p{margin-top:12px;color:var(--muted);font-size:17px;max-width:640px;margin-left:auto;margin-right:auto}
   .search-bar{margin:26px auto 0;max-width:620px;display:flex;background:var(--card);border:2.5px solid var(--ink);border-radius:16px;overflow:hidden;box-shadow:0 5px 0 var(--ink)}
   .search-bar input{flex:1;border:none;outline:none;padding:16px 18px;background:transparent;min-width:0}
-  .search-bar button{background:var(--orange);color:#fff;font-size:16px;font-weight:700;padding:0 26px}
-  .search-bar button:active{background:var(--orange-dark)}
+  .search-bar button{background:var(--saffron);color:#fff;font-size:16px;font-weight:700;padding:0 26px}
+  .search-bar button:active{background:var(--saffron-dark)}
   .trust{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:var(--muted);font-weight:600}
   .trust span b{color:var(--green)}
 
-  /* ---------- stats ---------- */
   .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:6px 0 10px}
   .stat{background:var(--card);border:2px solid var(--line);border-radius:var(--radius);padding:18px;text-align:center}
-  .stat b{font-size:24px;color:var(--orange)}
+  .stat b{font-size:24px;color:var(--saffron)}
   .stat small{display:block;color:var(--muted);font-size:13px;margin-top:4px;font-weight:600}
 
-  /* ---------- company strip ---------- */
-  .co-strip{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-  .co-chip{background:var(--card);border:2px solid var(--line);border-radius:99px;padding:9px 18px;font-weight:700;font-size:14px;color:#3d4854}
-
-  /* ---------- category grid ---------- */
   .sec{padding:26px 0}
   .sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px}
   .sec-head h2{font-size:22px;letter-spacing:-.4px}
-  .sec-head a{color:var(--blue);font-weight:700;font-size:14px;cursor:pointer;text-decoration:none}
+  .sec-head a{color:var(--navy);font-weight:700;font-size:14px;cursor:pointer;text-decoration:none}
   .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
   .cat{background:var(--card);border:2px solid var(--line);border-radius:var(--radius);padding:18px 14px;text-align:center;cursor:pointer;transition:.15s}
-  .cat:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:var(--shadow)}
+  .cat:hover{border-color:var(--saffron);transform:translateY(-3px);box-shadow:var(--shadow)}
   .cat .ico{font-size:32px}
   .cat b{display:block;margin-top:8px;font-size:15px}
   .cat small{color:var(--muted);font-size:12.5px}
 
-  /* ---------- job cards ---------- */
   .job-list{display:grid;gap:12px}
   .job{background:var(--card);border:2px solid var(--line);border-radius:var(--radius);padding:18px;cursor:pointer;transition:.15s;display:flex;gap:14px;align-items:flex-start}
-  .job:hover{border-color:var(--blue);box-shadow:var(--shadow)}
-  .job .ico{width:52px;height:52px;flex:none;border-radius:14px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:26px}
+  .job:hover{border-color:var(--navy);box-shadow:var(--shadow)}
+  .job .ico{width:52px;height:52px;flex:none;border-radius:14px;background:var(--navy-soft);display:flex;align-items:center;justify-content:center;font-size:26px}
   .job-main{flex:1;min-width:0}
   .job-main h3{font-size:17px;letter-spacing:-.2px}
   .job-main .co{color:var(--muted);font-size:14px;margin-top:2px}
   .job-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
   .tag{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:99px;background:var(--paper);border:1.5px solid var(--line);color:var(--ink)}
   .tag.sal{background:var(--green-soft);border-color:transparent;color:var(--green)}
-  .tag.urgent{background:#fdeae1;border-color:transparent;color:var(--orange-dark)}
-  .tag.verified{background:var(--blue-soft);border-color:transparent;color:var(--blue)}
+  .tag.urgent{background:#fbe9df;border-color:transparent;color:var(--saffron-dark)}
+  .tag.verified{background:var(--navy-soft);border-color:transparent;color:var(--navy)}
+  .tag.appr{background:#f3ecfa;border-color:transparent;color:#6d3fa9}
   .job-arrow{align-self:center;color:var(--muted);font-size:20px}
 
-  /* ---------- steps ---------- */
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
   .step{background:var(--card);border:2px solid var(--line);border-radius:var(--radius);padding:22px}
   .step .num{width:34px;height:34px;border-radius:10px;background:var(--ink);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
   .step b{font-size:16px}
   .step p{color:var(--muted);font-size:14px;margin-top:6px}
 
-  /* ---------- testimonials ---------- */
+  .funnel{background:var(--ink);border-radius:22px;padding:28px;color:#fff;margin:8px 0}
+  .funnel h2{font-size:20px;letter-spacing:-.4px}
+  .funnel p{color:#aeb8c2;font-size:14px;margin-top:4px}
+  .funnel-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:20px}
+  .funnel-cell{background:rgba(255,255,255,.07);border-radius:14px;padding:14px;text-align:center}
+  .funnel-cell b{font-size:21px;color:#ffb289}
+  .funnel-cell small{display:block;color:#aeb8c2;font-size:12px;margin-top:4px;font-weight:600}
+  .funnel-cell.green b{color:#7fd7ab}
+
   .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
   .testi{background:var(--card);border:2px solid var(--line);border-radius:var(--radius);padding:22px}
-  .testi .quote{font-size:15px;color:#3d4854}
+  .testi .quote{font-size:15px;color:#3a4650}
   .testi .who{display:flex;align-items:center;gap:10px;margin-top:14px}
-  .testi .av{width:42px;height:42px;border-radius:50%;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:22px}
+  .testi .av{width:42px;height:42px;border-radius:50%;background:var(--navy-soft);display:flex;align-items:center;justify-content:center;font-size:22px}
   .testi .who b{font-size:14.5px;display:block}
   .testi .who small{color:var(--muted);font-size:12.5px}
   .testi .stars{color:#f5a623;font-size:13px;margin-bottom:8px;letter-spacing:2px}
 
-  /* ---------- FAQ ---------- */
   .faq details{background:var(--card);border:2px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
   .faq summary{padding:16px 18px;font-weight:700;font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
-  .faq summary::after{content:"+";font-size:20px;color:var(--orange);font-weight:800}
+  .faq summary::after{content:"+";font-size:20px;color:var(--saffron);font-weight:800}
   .faq details[open] summary::after{content:"–"}
   .faq summary::-webkit-details-marker{display:none}
   .faq .ans{padding:0 18px 16px;color:var(--muted);font-size:14.5px}
 
-  /* ---------- employer banner ---------- */
-  .emp-banner{background:var(--ink);border-radius:22px;padding:30px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:10px 0 34px}
+  .emp-banner{background:var(--navy);border-radius:22px;padding:30px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:10px 0 34px}
   .emp-banner h2{font-size:22px;letter-spacing:-.4px}
-  .emp-banner p{color:#b9c2cc;margin-top:6px;font-size:15px}
-  .btn{display:inline-block;background:var(--orange);color:#fff;font-weight:700;font-size:16px;padding:14px 26px;border-radius:14px;box-shadow:0 3px 0 var(--orange-dark);transition:.1s}
+  .emp-banner p{color:#c3d2e6;margin-top:6px;font-size:15px}
+  .btn{display:inline-block;background:var(--saffron);color:#fff;font-weight:700;font-size:16px;padding:14px 26px;border-radius:14px;box-shadow:0 3px 0 var(--saffron-dark);transition:.1s}
   .btn:active{transform:translateY(2px);box-shadow:none}
-  .btn.blue{background:var(--blue);box-shadow:0 3px 0 #164379}
+  .btn.blue{background:var(--navy);box-shadow:0 3px 0 #0e3462}
   .btn.ghost{background:transparent;border:2px solid var(--line);color:var(--ink);box-shadow:none}
   .btn.big{width:100%;padding:17px;font-size:17px;text-align:center}
 
-  /* ---------- jobs view ---------- */
   .filters{display:flex;gap:8px;overflow-x:auto;padding:4px 0 14px;scrollbar-width:none}
   .filters::-webkit-scrollbar{display:none}
   .chip{flex:none;background:var(--card);border:2px solid var(--line);border-radius:99px;padding:8px 16px;font-size:14px;font-weight:600;color:var(--ink)}
   .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-  .toolbar{display:flex;gap:10px;margin:18px 0 14px;flex-wrap:wrap}
+  .kind-tabs{display:flex;gap:8px;margin-bottom:14px}
+  .kind-tab{flex:1;max-width:220px;padding:12px;border-radius:14px;border:2px solid var(--line);background:var(--card);font-weight:700;font-size:14.5px;color:var(--ink)}
+  .kind-tab.on{border-color:var(--saffron);background:#fdf0e8;color:var(--saffron-dark)}
+  .toolbar{display:flex;gap:10px;margin:6px 0 14px;flex-wrap:wrap}
   .toolbar input,.toolbar select{flex:1;min-width:140px;padding:13px 15px;border:2px solid var(--line);border-radius:14px;background:var(--card);outline:none}
-  .toolbar input:focus,.toolbar select:focus{border-color:var(--blue)}
+  .toolbar input:focus,.toolbar select:focus{border-color:var(--navy)}
   .count-line{color:var(--muted);font-size:14px;margin-bottom:12px;font-weight:600}
   .empty{text-align:center;padding:50px 20px;color:var(--muted)}
   .empty .big-ico{font-size:46px}
 
-  /* ---------- detail view ---------- */
-  .back{background:transparent;color:var(--blue);font-weight:700;font-size:15px;padding:16px 0 6px;display:inline-flex;align-items:center;gap:6px}
+  .back{background:transparent;color:var(--navy);font-weight:700;font-size:15px;padding:16px 0 6px;display:inline-flex;align-items:center;gap:6px}
   .detail-card{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:26px;margin-top:8px}
   .detail-top{display:flex;gap:16px;align-items:center}
-  .detail-top .ico{width:64px;height:64px;border-radius:16px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:32px;flex:none}
+  .detail-top .ico{width:64px;height:64px;border-radius:16px;background:var(--navy-soft);display:flex;align-items:center;justify-content:center;font-size:32px;flex:none}
   .detail-top h2{font-size:23px;letter-spacing:-.4px}
   .detail-top .co{color:var(--muted);margin-top:2px}
   .fact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:20px 0}
   .fact{background:var(--paper);border-radius:14px;padding:12px 14px}
   .fact small{color:var(--muted);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
   .fact b{display:block;font-size:15px;margin-top:3px}
+  .stipend-note{background:#f3ecfa;border-radius:14px;padding:14px 16px;margin-top:14px;font-size:14px;color:#4d2c7c}
+  .stipend-note b{display:block;margin-bottom:4px}
   .detail-sec{margin-top:18px}
   .detail-sec h4{font-size:15px;margin-bottom:8px}
   .detail-sec ul{list-style:none}
-  .detail-sec li{padding:6px 0 6px 26px;position:relative;color:#3d4854;font-size:15px}
+  .detail-sec li{padding:6px 0 6px 26px;position:relative;color:#3a4650;font-size:15px}
   .detail-sec li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
   .apply-row{display:flex;gap:10px;margin-top:24px}
   .apply-row .btn{flex:1;text-align:center}
 
-  /* ---------- forms ---------- */
   .form-card{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:26px;max-width:520px;margin:20px auto}
   .form-card h2{font-size:22px;letter-spacing:-.4px}
   .form-card .sub{color:var(--muted);font-size:14.5px;margin-top:6px}
   .field{margin-top:16px}
   .field label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
   .field input,.field select,.field textarea{width:100%;padding:14px 15px;border:2px solid var(--line);border-radius:14px;outline:none;background:var(--paper)}
-  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);background:#fff}
+  .field input:focus,.field select:focus{border-color:var(--navy);background:#fff}
   .field .hint{font-size:12.5px;color:var(--muted);margin-top:4px}
   .form-card .btn{margin-top:22px}
   .success{text-align:center;padding:46px 20px}
@@ -179,14 +177,18 @@
   .success p{color:var(--muted);margin-top:8px}
   .success .btn{margin-top:24px}
 
-  /* ---------- employer view ---------- */
   .emp-hero{text-align:center;padding:40px 0 10px}
   .emp-hero h1{font-size:clamp(26px,4.5vw,38px);letter-spacing:-.8px}
   .emp-hero p{color:var(--muted);margin-top:10px;font-size:16px}
   .emp-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:26px 0}
+  .scheme-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .scheme{background:var(--card);border:2px solid var(--line);border-radius:var(--radius);padding:22px}
+  .scheme .pct{font-size:26px;font-weight:800;color:var(--saffron)}
+  .scheme b{display:block;font-size:15.5px;margin-top:6px}
+  .scheme p{color:var(--muted);font-size:13.5px;margin-top:6px}
+  .scheme .fine{font-size:11.5px;color:#98a1ab;margin-top:8px}
 
-  /* ---------- login modal ---------- */
-  .overlay{position:fixed;inset:0;background:rgba(27,39,51,.55);z-index:100;display:none;align-items:center;justify-content:center;padding:16px}
+  .overlay{position:fixed;inset:0;background:rgba(24,37,48,.55);z-index:100;display:none;align-items:center;justify-content:center;padding:16px}
   .overlay.on{display:flex}
   .modal{background:var(--card);border-radius:22px;padding:26px;width:100%;max-width:400px;position:relative;animation:fade .2s ease}
   .modal .close{position:absolute;top:14px;right:14px;background:var(--paper);width:34px;height:34px;border-radius:50%;font-size:16px;font-weight:700;color:var(--muted)}
@@ -194,12 +196,12 @@
   .modal .sub{color:var(--muted);font-size:14px;margin-top:4px}
   .role-tabs{display:flex;gap:8px;margin-top:18px}
   .role-tab{flex:1;padding:12px;border-radius:14px;border:2px solid var(--line);background:var(--paper);font-weight:700;font-size:14.5px;color:var(--ink)}
-  .role-tab.on{border-color:var(--blue);background:var(--blue-soft);color:var(--blue)}
+  .role-tab.on{border-color:var(--navy);background:var(--navy-soft);color:var(--navy)}
   .otp-note{background:var(--green-soft);color:var(--green);font-size:13px;font-weight:600;padding:10px 14px;border-radius:12px;margin-top:14px}
 
-  footer{border-top:2px solid var(--line);margin-top:40px;padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
+  footer{border-top:2px solid var(--line);margin-top:40px;padding:26px 0;text-align:center;color:var(--muted);font-size:13.5px}
+  footer .fine{margin-top:6px;font-size:12px;color:#98a1ab}
 
-  /* ---------- toast ---------- */
   .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:13px 22px;border-radius:14px;font-weight:600;font-size:15px;opacity:0;transition:.3s;z-index:120;box-shadow:0 8px 24px rgba(0,0,0,.25)}
   .toast.show{transform:translateX(-50%);opacity:1}
 
@@ -215,15 +217,15 @@
 <header>
   <div class="wrap nav">
     <div class="logo" onclick="go('home')">
-      <div class="logo-mark">🛠️</div>
-      <b>Kaam<span>Setu</span></b>
+      <div class="logo-mark">🇮🇳</div>
+      <div><b>Bharat <span>SkillLink</span></b><small data-i18n="tagline">Rural-to-Industry Employment Network</small></div>
     </div>
     <nav class="nav-links">
       <button class="lang-btn" id="lang-btn" onclick="toggleLang()">हिंदी</button>
-      <button class="nav-btn hide-m" id="nav-jobs" data-i18n="navJobs" onclick="go('jobs')">Find Jobs</button>
-      <button class="nav-btn hide-m" id="nav-emp" data-i18n="navHire" onclick="go('employer')">Hire Workers</button>
+      <button class="nav-btn hide-m" id="nav-jobs" data-i18n="navJobs" onclick="go('jobs')">Find Work</button>
+      <button class="nav-btn hide-m" id="nav-emp" data-i18n="navHire" onclick="go('employer')">For Employers</button>
       <button class="nav-btn" id="login-btn" data-i18n="navLogin" onclick="openLogin()">Login</button>
-      <button class="nav-btn primary" data-i18n="navPost" onclick="go('post')">+ Post a Job</button>
+      <button class="nav-btn primary" data-i18n="navPost" onclick="go('post')">+ Post Vacancy</button>
     </nav>
   </div>
 </header>
@@ -232,38 +234,38 @@
 <div class="view on" id="view-home">
   <div class="wrap">
     <div class="hero">
-      <h1><span data-i18n="heroA">Good work. Good pay.</span><br><em data-i18n="heroB">No resume needed.</em></h1>
-      <p data-i18n="heroSub">Find electrician, driver, delivery, security &amp; 1000+ local jobs near you.</p>
-      <span class="hindi" data-i18n="heroPill">आपके शहर में नौकरी — सिर्फ़ फ़ोन नंबर से अप्लाई करें</span>
+      <div class="flag-line">🏭 <span data-i18n="flagLine">Connecting skilled youth with verified MSME employers across India</span></div>
+      <h1><span data-i18n="heroA">Skilled hands.</span> <em data-i18n="heroB">Real jobs.</em><br><span data-i18n="heroC">Anywhere in India.</span></h1>
+      <p data-i18n="heroSub">Jobs & apprenticeships for ITI, diploma and skilled youth — fitter, electrician, welder, CNC operator and more. Verified employers. Salary shown upfront.</p>
       <div class="search-bar">
-        <input id="home-search" type="text" data-i18n-ph="searchPh" placeholder="Try: driver, plumber, Mumbai…" onkeydown="if(event.key==='Enter')homeSearch()">
+        <input id="home-search" type="text" data-i18n-ph="searchPh" placeholder="Try: fitter, CNC, Pune…" onkeydown="if(event.key==='Enter')homeSearch()">
         <button data-i18n="searchBtn" onclick="homeSearch()">Search</button>
       </div>
       <div class="trust">
-        <span><b>✓</b> <span data-i18n="trust1">All jobs verified</span></span>
-        <span><b>✓</b> <span data-i18n="trust2">100% free for workers</span></span>
-        <span><b>✓</b> <span data-i18n="trust3">Apply in 30 seconds</span></span>
+        <span><b>✓</b> <span data-i18n="trust1">Verified employers only</span></span>
+        <span><b>✓</b> <span data-i18n="trust2">100% free for candidates</span></span>
+        <span><b>✓</b> <span data-i18n="trust3">Support till you join — and after</span></span>
       </div>
     </div>
 
     <div class="stats-row">
-      <div class="stat"><b>50,000+</b><small data-i18n="statWorkers">Registered workers</small></div>
-      <div class="stat"><b>7,000+</b><small data-i18n="statJobs">Jobs posted</small></div>
-      <div class="stat"><b>900+</b><small data-i18n="statHired">Workers hired</small></div>
-      <div class="stat"><b>₹0</b><small data-i18n="statFree">Charges for workers</small></div>
+      <div class="stat"><b>10,000+</b><small data-i18n="statWorkers">Registered candidates</small></div>
+      <div class="stat"><b>150+</b><small data-i18n="statEmp">MSME employers</small></div>
+      <div class="stat"><b>2,000+</b><small data-i18n="statJoin">Joinings facilitated</small></div>
+      <div class="stat"><b>₹0</b><small data-i18n="statFree">Charges for candidates</small></div>
     </div>
 
     <div class="sec">
       <div class="sec-head">
         <h2 data-i18n="browseTrade">Browse by trade</h2>
-        <a onclick="go('jobs')" data-i18n="seeAllJobs">See all jobs →</a>
+        <a onclick="go('jobs')" data-i18n="seeAllJobs">See all openings →</a>
       </div>
       <div class="cat-grid" id="cat-grid"></div>
     </div>
 
     <div class="sec">
       <div class="sec-head">
-        <h2 data-i18n="urgent">🔥 Urgent hiring</h2>
+        <h2 data-i18n="urgent">🔥 Urgent openings</h2>
         <a onclick="go('jobs')" data-i18n="seeAll">See all →</a>
       </div>
       <div class="job-list" id="featured-list"></div>
@@ -272,27 +274,26 @@
     <div class="sec">
       <div class="sec-head"><h2 data-i18n="howWorks">How it works</h2></div>
       <div class="steps">
-        <div class="step"><div class="num">1</div><b data-i18n="s1t">Find a job</b><p data-i18n="s1p">Search by your trade and city. Salary shown upfront on every job.</p></div>
-        <div class="step"><div class="num">2</div><b data-i18n="s2t">Apply with your phone</b><p data-i18n="s2p">Just your name and mobile number. No resume, no email needed.</p></div>
-        <div class="step"><div class="num">3</div><b data-i18n="s3t">Get a call</b><p data-i18n="s3p">The employer calls you directly within 24 hours to fix an interview.</p></div>
+        <div class="step"><div class="num">1</div><b data-i18n="s1t">Register with your phone</b><p data-i18n="s1p">Name, mobile number, trade and city. Our team or your ITI can help you register.</p></div>
+        <div class="step"><div class="num">2</div><b data-i18n="s2t">Get verified & matched</b><p data-i18n="s2p">We verify your certificates and match you with jobs or apprenticeships that fit your skills, wages and location.</p></div>
+        <div class="step"><div class="num">3</div><b data-i18n="s3t">Join with full support</b><p data-i18n="s3p">Interview help, clear salary details, migration support — and we stay in touch for your first 90 days.</p></div>
+      </div>
+    </div>
+
+    <div class="funnel">
+      <h2 data-i18n="funnelT">We measure jobs kept, not just clicks</h2>
+      <p data-i18n="funnelP">Most portals count registrations. We track every candidate to joining — and 90 days beyond.</p>
+      <div class="funnel-row">
+        <div class="funnel-cell"><b>10,000</b><small data-i18n="fn1">Registered</small></div>
+        <div class="funnel-cell"><b>5,000</b><small data-i18n="fn2">Verified</small></div>
+        <div class="funnel-cell"><b>4,000</b><small data-i18n="fn3">Interviews</small></div>
+        <div class="funnel-cell"><b>2,000</b><small data-i18n="fn4">Joinings</small></div>
+        <div class="funnel-cell green"><b>70%+</b><small data-i18n="fn5">Still employed after 90 days</small></div>
       </div>
     </div>
 
     <div class="sec">
-      <div class="sec-head"><h2 data-i18n="coTitle">Workers hired by</h2></div>
-      <div class="co-strip">
-        <span class="co-chip">🚚 QuickShip Logistics</span>
-        <span class="co-chip">🍽️ FoodDash</span>
-        <span class="co-chip">🏬 Galaxy Mall</span>
-        <span class="co-chip">🏨 Sunrise Hotel</span>
-        <span class="co-chip">🏗️ BuildRight</span>
-        <span class="co-chip">❄️ CoolCare Services</span>
-        <span class="co-chip">📦 BigBox Warehouse</span>
-      </div>
-    </div>
-
-    <div class="sec">
-      <div class="sec-head"><h2 data-i18n="testiTitle">Workers who found jobs</h2></div>
+      <div class="sec-head"><h2 data-i18n="testiTitle">Candidates who joined</h2></div>
       <div class="testi-grid" id="testi-grid"></div>
     </div>
 
@@ -303,10 +304,10 @@
 
     <div class="emp-banner">
       <div>
-        <h2 data-i18n="empBanT">Hiring workers? Post a job free.</h2>
-        <p data-i18n="empBanP">Reach thousands of verified electricians, drivers, cooks &amp; more in your city.</p>
+        <h2 data-i18n="empBanT">Hiring technicians or apprentices?</h2>
+        <p data-i18n="empBanP">Verified ITI & diploma candidates, apprenticeship paperwork handled, and government stipend support of up to 50%.</p>
       </div>
-      <button class="btn" data-i18n="empBanBtn" onclick="go('post')">Post a Job — Free</button>
+      <button class="btn" data-i18n="empBanBtn" onclick="go('employer')">Explore Employer Services</button>
     </div>
   </div>
 </div>
@@ -315,9 +316,14 @@
 <div class="view" id="view-jobs">
   <div class="wrap">
     <div class="sec">
-      <div class="sec-head"><h2 data-i18n="findNext">Find your next job</h2></div>
+      <div class="sec-head"><h2 data-i18n="findNext">Find your next opportunity</h2></div>
+      <div class="kind-tabs">
+        <button class="kind-tab on" id="kind-all" onclick="setKind('')" data-i18n="kAll">All</button>
+        <button class="kind-tab" id="kind-job" onclick="setKind('job')" data-i18n="kJobs">💼 Jobs</button>
+        <button class="kind-tab" id="kind-appr" onclick="setKind('apprenticeship')" data-i18n="kAppr">🎓 Apprenticeships</button>
+      </div>
       <div class="toolbar">
-        <input id="q" type="text" data-i18n-ph="searchPh2" placeholder="🔍 Search job or company…" oninput="renderJobs()">
+        <input id="q" type="text" data-i18n-ph="searchPh2" placeholder="🔍 Search trade or company…" oninput="renderJobs()">
         <select id="city-f" onchange="renderJobs()"></select>
         <select id="sal-f" onchange="renderJobs()"></select>
       </div>
@@ -335,7 +341,7 @@
 <!-- ================= DETAIL ================= -->
 <div class="view" id="view-detail">
   <div class="wrap">
-    <button class="back" onclick="go('jobs')" data-i18n="backJobs">← Back to jobs</button>
+    <button class="back" onclick="go('jobs')" data-i18n="backJobs">← Back to openings</button>
     <div id="detail-body"></div>
   </div>
 </div>
@@ -348,16 +354,20 @@
       <h2 data-i18n="applyT">Apply in 30 seconds</h2>
       <p class="sub" id="apply-job-name"></p>
       <div class="field">
-        <label data-i18n="fName">Your name / आपका नाम</label>
+        <label data-i18n="fName">Your name</label>
         <input id="a-name" type="text" data-i18n-ph="fNamePh" placeholder="e.g. Ramesh Kumar">
       </div>
       <div class="field">
-        <label data-i18n="fPhone">Mobile number / मोबाइल नंबर</label>
+        <label data-i18n="fPhone">Mobile number</label>
         <input id="a-phone" type="tel" maxlength="10" data-i18n-ph="fPhonePh" placeholder="10-digit number">
-        <div class="hint" data-i18n="fPhoneHint">The employer will call you on this number.</div>
+        <div class="hint" data-i18n="fPhoneHint">Our team will call you to complete verification.</div>
       </div>
       <div class="field">
-        <label data-i18n="fExp">Experience / अनुभव</label>
+        <label data-i18n="fQual">Qualification</label>
+        <select id="a-qual"></select>
+      </div>
+      <div class="field">
+        <label data-i18n="fExp">Experience</label>
         <select id="a-exp"></select>
       </div>
       <button class="btn big" data-i18n="submitApply" onclick="submitApply()">Submit Application ✓</button>
@@ -366,7 +376,7 @@
       <div class="big-ico">🎉</div>
       <h2 data-i18n="appSentT">Application sent!</h2>
       <p id="apply-success-msg"></p>
-      <button class="btn blue" data-i18n="findMore" onclick="go('jobs')">Find more jobs</button>
+      <button class="btn blue" data-i18n="findMore" onclick="go('jobs')">Find more openings</button>
     </div>
   </div>
 </div>
@@ -375,52 +385,70 @@
 <div class="view" id="view-employer">
   <div class="wrap">
     <div class="emp-hero">
-      <h1><span data-i18n="empHeroA">Hire skilled workers,</span> <em style="font-style:normal;color:var(--orange)" data-i18n="empHeroB">fast.</em></h1>
-      <p data-i18n="empHeroSub">Post a job in 2 minutes. Get calls from verified workers in your city.</p>
+      <h1><span data-i18n="empHeroA">Hire verified technicians,</span> <em style="font-style:normal;color:var(--saffron)" data-i18n="empHeroB">not resumes.</em></h1>
+      <p data-i18n="empHeroSub">ITI & diploma candidates, practically assessed, from districts across India. We handle interviews, apprenticeship paperwork and retention follow-up.</p>
       <div class="emp-stats">
-        <div class="stat"><b>50,000+</b><small data-i18n="statWorkers2">Registered workers</small></div>
-        <div class="stat"><b>12</b><small data-i18n="statTrades">Trades covered</small></div>
-        <div class="stat"><b>24 hrs</b><small data-i18n="statTime">Avg. time to first applicant</small></div>
-        <div class="stat"><b>₹0</b><small data-i18n="statCost">Cost to post</small></div>
+        <div class="stat"><b>5,000+</b><small data-i18n="statVerified">Verified active candidates</small></div>
+        <div class="stat"><b>12+</b><small data-i18n="statTrades">Industrial trades</small></div>
+        <div class="stat"><b>70%+</b><small data-i18n="statRet">90-day retention</small></div>
+        <div class="stat"><b>60%+</b><small data-i18n="statRepeat">Employers hire again</small></div>
       </div>
-      <button class="btn big" style="max-width:340px" data-i18n="empBanBtn2" onclick="go('post')">Post a Job — Free</button>
+      <button class="btn big" style="max-width:340px" data-i18n="postBtn" onclick="go('post')">Post a Vacancy — Free</button>
     </div>
+
     <div class="sec">
-      <div class="sec-head"><h2 data-i18n="whyEmp">Why employers use KaamSetu</h2></div>
+      <div class="sec-head"><h2 data-i18n="schemeT">Government support when you hire apprentices</h2></div>
+      <div class="scheme-grid">
+        <div class="scheme"><div class="pct">~25%</div><b data-i18n="sch1t">NAPS — stipend reimbursement</b><p data-i18n="sch1p">National Apprenticeship Promotion Scheme reimburses part of the prescribed stipend for trade apprentices (cap applies).</p></div>
+        <div class="scheme"><div class="pct">~50%</div><b data-i18n="sch2t">NATS — for diploma & graduate apprentices</b><p data-i18n="sch2p">Government reimburses about half of the prescribed minimum stipend to establishments under NATS 2.0.</p></div>
+        <div class="scheme"><div class="pct">+ ₹</div><b data-i18n="sch3t">State top-ups & employment incentives</b><p data-i18n="sch3p">Many states add monthly stipend top-ups and employment-linked incentives. We identify what applies to you and handle the paperwork.</p></div>
+      </div>
+      <p style="font-size:12px;color:#98a1ab;margin-top:10px" data-i18n="schemeFine">Indicative figures based on public information. Eligibility, rates and operative periods must be confirmed in writing before commitment.</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head"><h2 data-i18n="whyEmp">Why employers use Bharat SkillLink</h2></div>
       <div class="steps">
-        <div class="step"><div class="num">✓</div><b data-i18n="e1t">Verified profiles</b><p data-i18n="e1p">Every worker's phone number is OTP-verified before they can apply.</p></div>
-        <div class="step"><div class="num">✓</div><b data-i18n="e2t">Direct calls, no middlemen</b><p data-i18n="e2p">Applicants share their number — you call and hire directly. No commission.</p></div>
-        <div class="step"><div class="num">✓</div><b data-i18n="e3t">Local candidates only</b><p data-i18n="e3p">Your job is shown only to workers in your city, so they can actually join.</p></div>
+        <div class="step"><div class="num">✓</div><b data-i18n="e1t">Practically assessed candidates</b><p data-i18n="e1p">Certificates verified with institutes, plus short practical assessments — you interview people who can actually do the job.</p></div>
+        <div class="step"><div class="num">✓</div><b data-i18n="e2t">Lower absenteeism & attrition</b><p data-i18n="e2p">Realistic job previews, migration support and 90-day follow-up mean candidates who join, stay.</p></div>
+        <div class="step"><div class="num">✓</div><b data-i18n="e3t">Apprenticeship compliance handled</b><p data-i18n="e3p">Contracts, portal registrations and stipend claims under NAPS/NATS and state schemes — administered for you.</p></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ================= POST JOB ================= -->
+<!-- ================= POST VACANCY ================= -->
 <div class="view" id="view-post">
   <div class="wrap">
     <button class="back" onclick="go('employer')" data-i18n="back">← Back</button>
     <div class="form-card" id="post-form-card">
-      <h2 data-i18n="postT">Post a job — free</h2>
-      <p class="sub" data-i18n="postSub">Fill this once. Workers will call you or apply directly.</p>
+      <h2 data-i18n="postT">Post a vacancy — free</h2>
+      <p class="sub" data-i18n="postSub">Our team verifies every employer before the vacancy goes live.</p>
       <div class="field">
-        <label data-i18n="pTitle">Job title</label>
-        <input id="p-title" type="text" data-i18n-ph="pTitlePh" placeholder="e.g. AC Technician">
+        <label data-i18n="pKind">Opening type</label>
+        <select id="p-kind">
+          <option value="job" data-i18n="pKindJob">Job</option>
+          <option value="apprenticeship" data-i18n="pKindAppr">Apprenticeship</option>
+        </select>
       </div>
       <div class="field">
-        <label data-i18n="pCat">Trade / category</label>
+        <label data-i18n="pTitle">Role title</label>
+        <input id="p-title" type="text" data-i18n-ph="pTitlePh" placeholder="e.g. CNC Machine Operator">
+      </div>
+      <div class="field">
+        <label data-i18n="pCat">Trade</label>
         <select id="p-cat"></select>
       </div>
       <div class="field">
-        <label data-i18n="pCo">Company / shop name</label>
-        <input id="p-co" type="text" data-i18n-ph="pCoPh" placeholder="e.g. Sharma Electricals">
+        <label data-i18n="pCo">Company name</label>
+        <input id="p-co" type="text" data-i18n-ph="pCoPh" placeholder="e.g. Precision Auto Components">
       </div>
       <div class="field">
-        <label data-i18n="pCity">City</label>
+        <label data-i18n="pCity">City / industrial cluster</label>
         <input id="p-city" type="text" data-i18n-ph="pCityPh" placeholder="e.g. Pune">
       </div>
       <div class="field">
-        <label data-i18n="pSal">Monthly salary (₹)</label>
+        <label data-i18n="pSal">Monthly salary / stipend (₹)</label>
         <div style="display:flex;gap:10px">
           <input id="p-sal-min" type="number" placeholder="Min 15000">
           <input id="p-sal-max" type="number" placeholder="Max 22000">
@@ -430,13 +458,13 @@
         <label data-i18n="pPhone">Contact number</label>
         <input id="p-phone" type="tel" maxlength="10" data-i18n-ph="fPhonePh" placeholder="10-digit number">
       </div>
-      <button class="btn big" data-i18n="publish" onclick="submitPost()">Publish Job ✓</button>
+      <button class="btn big" data-i18n="publish" onclick="submitPost()">Submit for Verification ✓</button>
     </div>
     <div class="success" id="post-success" style="display:none">
       <div class="big-ico">✅</div>
-      <h2 data-i18n="liveT">Job is live!</h2>
-      <p data-i18n="liveP">Your job is now visible to workers in your city. It appears at the top of the jobs list.</p>
-      <button class="btn blue" data-i18n="viewList" onclick="go('jobs')">View it in job list</button>
+      <h2 data-i18n="liveT">Vacancy submitted!</h2>
+      <p data-i18n="liveP">In the live platform our team verifies your establishment first. For this demo, your vacancy is now visible at the top of the openings list.</p>
+      <button class="btn blue" data-i18n="viewList" onclick="go('jobs')">View openings list</button>
     </div>
   </div>
 </div>
@@ -446,14 +474,14 @@
   <div class="modal">
     <button class="close" onclick="closeLogin()">✕</button>
     <h2 data-i18n="loginT">Login / Sign up</h2>
-    <p class="sub" data-i18n="loginSub">One account for jobs and hiring. No password — just OTP.</p>
+    <p class="sub" data-i18n="loginSub">One account. No password — just OTP.</p>
     <div class="role-tabs">
-      <button class="role-tab on" id="role-worker" onclick="setRole('worker')"><span data-i18n="roleWorker">👷 Worker</span></button>
+      <button class="role-tab on" id="role-worker" onclick="setRole('worker')"><span data-i18n="roleWorker">👷 Candidate</span></button>
       <button class="role-tab" id="role-employer" onclick="setRole('employer')"><span data-i18n="roleEmployer">🏢 Employer</span></button>
     </div>
     <div id="login-step1">
       <div class="field">
-        <label data-i18n="fPhone2">Mobile number / मोबाइल नंबर</label>
+        <label data-i18n="fPhone2">Mobile number</label>
         <input id="l-phone" type="tel" maxlength="10" data-i18n-ph="fPhonePh" placeholder="10-digit number">
       </div>
       <button class="btn big" data-i18n="getOtp" onclick="sendOtp()">Get OTP →</button>
@@ -470,145 +498,190 @@
 </div>
 
 <footer>
-  <div class="wrap">🛠️ <b>KaamSetu</b> — <span data-i18n="footer">connecting workers &amp; employers directly. Free for workers, always.</span></div>
+  <div class="wrap">
+    🇮🇳 <b>Bharat SkillLink</b> — <span data-i18n="footer">verified skill supply, connected to genuine industrial demand. Free for candidates, always.</span>
+    <div class="fine" data-i18n="footerFine">Demonstration prototype. Statistics shown are pilot targets from the concept note, not live figures.</div>
+  </div>
 </footer>
 
 <div class="toast" id="toast"></div>
 
 <script>
+/* =====================================================
+   DATA ARCHITECTURE
+   Openings are embedded below as a fallback, but on page
+   load we try to fetch("jobs.json") from the same folder.
+   Replace/regenerate jobs.json (manually or via a script
+   e.g. GitHub Action) and the site updates — no code edits.
+   ===================================================== */
+
 /* ---------------- i18n ---------------- */
 const I18N = {
 en:{
-  navJobs:'Find Jobs', navHire:'Hire Workers', navLogin:'Login', navPost:'+ Post a Job',
-  heroA:'Good work. Good pay.', heroB:'No resume needed.',
-  heroSub:'Find electrician, driver, delivery, security & 1000+ local jobs near you.',
-  heroPill:'आपके शहर में नौकरी — सिर्फ़ फ़ोन नंबर से अप्लाई करें',
-  searchPh:'Try: driver, plumber, Mumbai…', searchBtn:'Search',
-  trust1:'All jobs verified', trust2:'100% free for workers', trust3:'Apply in 30 seconds',
-  statWorkers:'Registered workers', statJobs:'Jobs posted', statHired:'Workers hired', statFree:'Charges for workers',
-  browseTrade:'Browse by trade', seeAllJobs:'See all jobs →', seeAll:'See all →',
-  urgent:'🔥 Urgent hiring', howWorks:'How it works',
-  s1t:'Find a job', s1p:'Search by your trade and city. Salary shown upfront on every job.',
-  s2t:'Apply with your phone', s2p:'Just your name and mobile number. No resume, no email needed.',
-  s3t:'Get a call', s3p:'The employer calls you directly within 24 hours to fix an interview.',
-  coTitle:'Workers hired by', testiTitle:'Workers who found jobs', faqTitle:'Common questions',
-  empBanT:'Hiring workers? Post a job free.', empBanP:'Reach thousands of verified electricians, drivers, cooks & more in your city.',
-  empBanBtn:'Post a Job — Free', empBanBtn2:'Post a Job — Free',
-  findNext:'Find your next job', searchPh2:'🔍 Search job or company…',
-  allCities:'All cities', anySalary:'Any salary', anyEdu:'Any education', edu10:'10th pass', edu12:'12th pass', eduNone:'No education needed', eduITI:'ITI / Diploma',
+  tagline:'Rural-to-Industry Employment Network',
+  navJobs:'Find Work', navHire:'For Employers', navLogin:'Login', navPost:'+ Post Vacancy',
+  flagLine:'Connecting skilled youth with verified MSME employers across India',
+  heroA:'Skilled hands.', heroB:'Real jobs.', heroC:'Anywhere in India.',
+  heroSub:'Jobs & apprenticeships for ITI, diploma and skilled youth — fitter, electrician, welder, CNC operator and more. Verified employers. Salary shown upfront.',
+  searchPh:'Try: fitter, CNC, Pune…', searchBtn:'Search',
+  trust1:'Verified employers only', trust2:'100% free for candidates', trust3:'Support till you join — and after',
+  statWorkers:'Registered candidates', statEmp:'MSME employers', statJoin:'Joinings facilitated', statFree:'Charges for candidates',
+  browseTrade:'Browse by trade', seeAllJobs:'See all openings →', seeAll:'See all →',
+  urgent:'🔥 Urgent openings', howWorks:'How it works',
+  s1t:'Register with your phone', s1p:'Name, mobile number, trade and city. Our team or your ITI can help you register.',
+  s2t:'Get verified & matched', s2p:'We verify your certificates and match you with jobs or apprenticeships that fit your skills, wages and location.',
+  s3t:'Join with full support', s3p:'Interview help, clear salary details, migration support — and we stay in touch for your first 90 days.',
+  funnelT:'We measure jobs kept, not just clicks', funnelP:'Most portals count registrations. We track every candidate to joining — and 90 days beyond.',
+  fn1:'Registered', fn2:'Verified', fn3:'Interviews', fn4:'Joinings', fn5:'Still employed after 90 days',
+  testiTitle:'Candidates who joined', faqTitle:'Common questions',
+  empBanT:'Hiring technicians or apprentices?', empBanP:'Verified ITI & diploma candidates, apprenticeship paperwork handled, and government stipend support of up to 50%.',
+  empBanBtn:'Explore Employer Services',
+  findNext:'Find your next opportunity', kAll:'All', kJobs:'💼 Jobs', kAppr:'🎓 Apprenticeships',
+  searchPh2:'🔍 Search trade or company…',
+  allCities:'All cities', anySalary:'Any salary', anyEdu:'Any qualification', edu10:'10th pass', edu12:'12th pass', eduITI:'ITI', eduDiploma:'Diploma', eduNone:'No qualification needed',
   anyType:'Full & part time', tFull:'Full time', tPart:'Part time', tFlex:'Flexible',
-  allTrades:'All trades', jobsFound:'jobs found', jobFound:'job found',
-  emptyT:'No jobs match.', emptyP:'Try removing a filter or search a different word.',
-  backJobs:'← Back to jobs', back:'← Back',
-  lSalary:'Salary', lType:'Job type', lShift:'Shift', lExp:'Experience', lEdu:'Education',
-  whatNeed:'What you need', whatGet:'What you get', applyNow:'Apply Now ✓', callEmp:'📞 Call Employer',
-  verifiedEmp:'✓ Verified employer', callToast:'📞 In the real app, this calls the employer directly',
+  allTrades:'All trades', jobsFound:'openings found', jobFound:'opening found',
+  emptyT:'No openings match.', emptyP:'Try removing a filter or search a different word.',
+  backJobs:'← Back to openings', back:'← Back',
+  lSalary:'Salary', lStipend:'Stipend', lType:'Type', lShift:'Shift', lExp:'Experience', lEdu:'Qualification',
+  apprLabel:'Apprenticeship', apprNote:'Government-supported apprenticeship',
+  apprNoteP:'Stipend is supported under NAPS/NATS government schemes. Successful apprentices are often absorbed into permanent roles.',
+  whatNeed:'What you need', whatGet:'What you get', applyNow:'Apply Now ✓', callEmp:'📞 Talk to our team',
+  verifiedEmp:'✓ Verified employer', callToast:'📞 In the live platform, our field team calls you back',
   applyT:'Apply in 30 seconds',
-  fName:'Your name / आपका नाम', fNamePh:'e.g. Ramesh Kumar',
-  fPhone:'Mobile number / मोबाइल नंबर', fPhone2:'Mobile number / मोबाइल नंबर', fPhonePh:'10-digit number',
-  fPhoneHint:'The employer will call you on this number.', fExp:'Experience / अनुभव',
-  expOpts:['New — no experience','Less than 1 year','1 – 3 years','3 – 5 years','5+ years'],
+  fName:'Your name', fNamePh:'e.g. Ramesh Kumar',
+  fPhone:'Mobile number', fPhone2:'Mobile number', fPhonePh:'10-digit number',
+  fPhoneHint:'Our team will call you to complete verification.', fQual:'Qualification', fExp:'Experience',
+  qualOpts:['10th pass or below','12th pass','ITI','Diploma','Other'],
+  expOpts:['Fresher — no experience','Less than 1 year','1 – 3 years','3 – 5 years','5+ years'],
   submitApply:'Submit Application ✓', appSentT:'Application sent!',
-  appSentP:(co,n,p)=>`${co} will call ${n} on ${p} within 24 hours.`,
-  findMore:'Find more jobs',
-  empHeroA:'Hire skilled workers,', empHeroB:'fast.', empHeroSub:'Post a job in 2 minutes. Get calls from verified workers in your city.',
-  statWorkers2:'Registered workers', statTrades:'Trades covered', statTime:'Avg. time to first applicant', statCost:'Cost to post',
-  whyEmp:'Why employers use KaamSetu',
-  e1t:'Verified profiles', e1p:"Every worker's phone number is OTP-verified before they can apply.",
-  e2t:'Direct calls, no middlemen', e2p:'Applicants share their number — you call and hire directly. No commission.',
-  e3t:'Local candidates only', e3p:'Your job is shown only to workers in your city, so they can actually join.',
-  postT:'Post a job — free', postSub:'Fill this once. Workers will call you or apply directly.',
-  pTitle:'Job title', pTitlePh:'e.g. AC Technician', pCat:'Trade / category', pCo:'Company / shop name', pCoPh:'e.g. Sharma Electricals',
-  pCity:'City', pCityPh:'e.g. Pune', pSal:'Monthly salary (₹)', pPhone:'Contact number', publish:'Publish Job ✓',
-  liveT:'Job is live!', liveP:'Your job is now visible to workers in your city. It appears at the top of the jobs list.', viewList:'View it in job list',
-  loginT:'Login / Sign up', loginSub:'One account for jobs and hiring. No password — just OTP.',
-  roleWorker:'👷 Worker', roleEmployer:'🏢 Employer', getOtp:'Get OTP →', otpNote:'Demo mode: enter any 4 digits as OTP.',
+  appSentP:(co,n,p)=>`Our team will call ${n} on ${p} to verify details, then connect you with ${co}.`,
+  findMore:'Find more openings',
+  empHeroA:'Hire verified technicians,', empHeroB:'not resumes.',
+  empHeroSub:'ITI & diploma candidates, practically assessed, from districts across India. We handle interviews, apprenticeship paperwork and retention follow-up.',
+  statVerified:'Verified active candidates', statTrades:'Industrial trades', statRet:'90-day retention', statRepeat:'Employers hire again',
+  postBtn:'Post a Vacancy — Free',
+  schemeT:'Government support when you hire apprentices',
+  sch1t:'NAPS — stipend reimbursement', sch1p:'National Apprenticeship Promotion Scheme reimburses part of the prescribed stipend for trade apprentices (cap applies).',
+  sch2t:'NATS — for diploma & graduate apprentices', sch2p:'Government reimburses about half of the prescribed minimum stipend to establishments under NATS 2.0.',
+  sch3t:'State top-ups & employment incentives', sch3p:'Many states add monthly stipend top-ups and employment-linked incentives. We identify what applies to you and handle the paperwork.',
+  schemeFine:'Indicative figures based on public information. Eligibility, rates and operative periods must be confirmed in writing before commitment.',
+  whyEmp:'Why employers use Bharat SkillLink',
+  e1t:'Practically assessed candidates', e1p:'Certificates verified with institutes, plus short practical assessments — you interview people who can actually do the job.',
+  e2t:'Lower absenteeism & attrition', e2p:'Realistic job previews, migration support and 90-day follow-up mean candidates who join, stay.',
+  e3t:'Apprenticeship compliance handled', e3p:'Contracts, portal registrations and stipend claims under NAPS/NATS and state schemes — administered for you.',
+  postT:'Post a vacancy — free', postSub:'Our team verifies every employer before the vacancy goes live.',
+  pKind:'Opening type', pKindJob:'Job', pKindAppr:'Apprenticeship',
+  pTitle:'Role title', pTitlePh:'e.g. CNC Machine Operator', pCat:'Trade', pCo:'Company name', pCoPh:'e.g. Precision Auto Components',
+  pCity:'City / industrial cluster', pCityPh:'e.g. Pune', pSal:'Monthly salary / stipend (₹)', pPhone:'Contact number', publish:'Submit for Verification ✓',
+  liveT:'Vacancy submitted!', liveP:'In the live platform our team verifies your establishment first. For this demo, your vacancy is now visible at the top of the openings list.', viewList:'View openings list',
+  loginT:'Login / Sign up', loginSub:'One account. No password — just OTP.',
+  roleWorker:'👷 Candidate', roleEmployer:'🏢 Employer', getOtp:'Get OTP →', otpNote:'Demo mode: enter any 4 digits as OTP.',
   enterOtp:'Enter OTP', verify:'Verify & Login ✓',
-  loggedIn:r=>`Logged in as ${r==='worker'?'Worker':'Employer'} ✓`,
+  loggedIn:r=>`Logged in as ${r==='worker'?'Candidate':'Employer'} ✓`,
   vName:'Please enter your name', vPhone:'Please enter a valid 10-digit mobile number', vOtp:'Please enter the 4-digit OTP',
-  vTitle:'Please enter a job title', vCo:'Please enter company / shop name', vCity:'Please enter city', vSal:'Please enter a valid salary range',
-  footer:'connecting workers & employers directly. Free for workers, always.',
+  vTitle:'Please enter a role title', vCo:'Please enter company name', vCity:'Please enter city', vSal:'Please enter a valid salary range',
+  footer:'verified skill supply, connected to genuine industrial demand. Free for candidates, always.',
+  footerFine:'Demonstration prototype. Statistics shown are pilot targets from the concept note, not live figures.',
   faqs:[
-    ['Is KaamSetu free for workers?','Yes, 100% free. No charges to search, apply, or get hired. We never ask workers for money.'],
-    ['Do I need a resume or email?','No. You only need your name and mobile number. The employer calls you directly.'],
-    ['Are the jobs real and verified?','Employers with the ✓ Verified badge have confirmed their business identity with us. Never pay anyone who promises a job for money.'],
-    ['What if I studied only till 10th class?','Many jobs need no degree at all. Use the education filter to see jobs for 10th pass, 12th pass, or no education.'],
-    ['How do employers post a job?','Tap "Post a Job", fill one small form, and your job goes live free. Workers call you directly.'],
+    ['Is Bharat SkillLink free for candidates?','Yes, completely free. We never charge candidates for registration, matching, or joining — and we never sell your data. Employers pay for our services.'],
+    ['Do I need a resume?','No. Your verified profile — trade, certificates, assessment and preferences — is your resume. Register with just your phone number.'],
+    ['What is an apprenticeship? Is the stipend real?','An apprenticeship is paid on-the-job training under a government-registered contract (NAPS/NATS). You earn a monthly stipend while learning, and many apprentices are absorbed into permanent jobs.'],
+    ['I am from a village — how will I manage in a new city?','We share full details before you decide: salary, deductions, shift, accommodation and transport. Our team supports your travel and joining, and follows up during your first 90 days.'],
+    ['I only passed 10th class. Are there openings for me?','Yes. Many operator and helper roles need 10th pass or below. Use the qualification filter to see what fits you.'],
+    ['How do employers verify candidates?','We check institute certificates, conduct practical assessments for the trade, and verify identity — before you ever see the profile.'],
   ],
   testis:[
-    ['🧔','Ramesh Kumar','Driver, Mumbai','I applied with just my phone number and got a call the same evening. Joined QuickShip in 3 days.'],
-    ['👩','Sunita Devi','Housekeeping, Delhi','No agent, no fees. I found part-time hotel work near my house. Salary was shown clearly before applying.'],
-    ['👨','Arif Shaikh','AC Technician, Mumbai','Salary written on every job — no time waste. I got ₹4,000 more than my last job.'],
+    ['🧑‍🏭','Ramesh Prajapati','Fitter · joined in Sanand','My ITI helped me register. SkillLink arranged the interview and even my hostel. Six months now, salary on time every month.'],
+    ['👩‍🏭','Kavita Meena','Assembly Operator · joined in Pune','I was scared to move to a new city. Their team explained everything before I said yes — salary, room, bus route. They still call to check on me.'],
+    ['🧑‍🔧','Suresh Yadav','CNC Apprentice · joined in Faridabad','Apprenticeship with stipend, and the company kept me on after. Better than searching job boards for a year.'],
   ],
   types:{'Full time':'Full time','Part time':'Part time','Flexible':'Flexible'},
-  shifts:{'Day shift':'Day shift','Night shift':'Night shift','Split shift':'Split shift','Rotational':'Rotational','Any shift':'Any shift'},
-  edus:{'10th':'10th pass','12th':'12th pass','none':'No education needed','iti':'ITI / Diploma'},
+  shifts:{'Day shift':'Day shift','Night shift':'Night shift','Rotational':'Rotational','Any shift':'Any shift'},
+  edus:{'10th':'10th pass','12th':'12th pass','iti':'ITI','diploma':'Diploma','none':'No qualification needed'},
 },
 hi:{
-  navJobs:'नौकरी खोजें', navHire:'वर्कर हायर करें', navLogin:'लॉगिन', navPost:'+ नौकरी पोस्ट करें',
-  heroA:'अच्छा काम। अच्छी तनख्वाह।', heroB:'बिना रिज़्यूमे के।',
-  heroSub:'इलेक्ट्रीशियन, ड्राइवर, डिलीवरी, सिक्योरिटी — आपके पास की 1000+ नौकरियाँ।',
-  heroPill:'Jobs in your city — apply with just your phone number',
-  searchPh:'जैसे: ड्राइवर, प्लंबर, मुंबई…', searchBtn:'खोजें',
-  trust1:'सभी नौकरियाँ वेरिफ़ाइड', trust2:'वर्कर के लिए 100% फ्री', trust3:'30 सेकंड में अप्लाई',
-  statWorkers:'रजिस्टर्ड वर्कर', statJobs:'नौकरियाँ पोस्ट हुईं', statHired:'वर्कर हायर हुए', statFree:'वर्कर से चार्ज',
-  browseTrade:'काम के हिसाब से देखें', seeAllJobs:'सभी नौकरियाँ →', seeAll:'सभी देखें →',
+  tagline:'गाँव से उद्योग तक रोज़गार नेटवर्क',
+  navJobs:'काम खोजें', navHire:'नियोक्ताओं के लिए', navLogin:'लॉगिन', navPost:'+ वैकेंसी पोस्ट करें',
+  flagLine:'पूरे भारत में कुशल युवाओं को वेरिफ़ाइड MSME नियोक्ताओं से जोड़ना',
+  heroA:'हुनरमंद हाथ।', heroB:'असली नौकरियाँ।', heroC:'पूरे भारत में।',
+  heroSub:'ITI, डिप्लोमा और कुशल युवाओं के लिए नौकरियाँ और अप्रेंटिसशिप — फिटर, इलेक्ट्रीशियन, वेल्डर, CNC ऑपरेटर और भी। वेरिफ़ाइड नियोक्ता। सैलरी पहले से साफ़।',
+  searchPh:'जैसे: फिटर, CNC, पुणे…', searchBtn:'खोजें',
+  trust1:'सिर्फ़ वेरिफ़ाइड नियोक्ता', trust2:'उम्मीदवारों के लिए 100% फ्री', trust3:'जॉइनिंग तक और उसके बाद भी साथ',
+  statWorkers:'रजिस्टर्ड उम्मीदवार', statEmp:'MSME नियोक्ता', statJoin:'जॉइनिंग करवाईं', statFree:'उम्मीदवारों से चार्ज',
+  browseTrade:'ट्रेड के हिसाब से देखें', seeAllJobs:'सभी ओपनिंग →', seeAll:'सभी देखें →',
   urgent:'🔥 तुरंत भर्ती', howWorks:'कैसे काम करता है',
-  s1t:'नौकरी खोजें', s1p:'अपने काम और शहर से खोजें। हर नौकरी पर सैलरी पहले से लिखी है।',
-  s2t:'फ़ोन से अप्लाई करें', s2p:'सिर्फ़ नाम और मोबाइल नंबर। न रिज़्यूमे, न ईमेल।',
-  s3t:'कॉल पाएँ', s3p:'मालिक 24 घंटे में सीधे आपको कॉल करके इंटरव्यू तय करेगा।',
-  coTitle:'यहाँ वर्कर हायर हुए', testiTitle:'जिन्हें नौकरी मिली', faqTitle:'आम सवाल',
-  empBanT:'वर्कर चाहिए? फ्री में नौकरी पोस्ट करें।', empBanP:'अपने शहर के हज़ारों वेरिफ़ाइड इलेक्ट्रीशियन, ड्राइवर, कुक तक पहुँचें।',
-  empBanBtn:'नौकरी पोस्ट करें — फ्री', empBanBtn2:'नौकरी पोस्ट करें — फ्री',
-  findNext:'अपनी अगली नौकरी खोजें', searchPh2:'🔍 नौकरी या कंपनी खोजें…',
-  allCities:'सभी शहर', anySalary:'कोई भी सैलरी', anyEdu:'कोई भी पढ़ाई', edu10:'10वीं पास', edu12:'12वीं पास', eduNone:'पढ़ाई ज़रूरी नहीं', eduITI:'ITI / डिप्लोमा',
+  s1t:'फ़ोन से रजिस्टर करें', s1p:'नाम, मोबाइल नंबर, ट्रेड और शहर। हमारी टीम या आपकी ITI रजिस्टर करने में मदद करेगी।',
+  s2t:'वेरिफ़िकेशन और मैचिंग', s2p:'हम आपके सर्टिफ़िकेट जाँचते हैं और आपके हुनर, वेतन और शहर के हिसाब से नौकरी या अप्रेंटिसशिप से मिलाते हैं।',
+  s3t:'पूरे सहारे के साथ जॉइन करें', s3p:'इंटरव्यू में मदद, साफ़ सैलरी जानकारी, आने-जाने में सहायता — और पहले 90 दिन तक हम संपर्क में रहते हैं।',
+  funnelT:'हम क्लिक नहीं, टिकी हुई नौकरियाँ गिनते हैं', funnelP:'ज़्यादातर पोर्टल रजिस्ट्रेशन गिनते हैं। हम हर उम्मीदवार को जॉइनिंग तक — और 90 दिन बाद तक ट्रैक करते हैं।',
+  fn1:'रजिस्टर्ड', fn2:'वेरिफ़ाइड', fn3:'इंटरव्यू', fn4:'जॉइनिंग', fn5:'90 दिन बाद भी नौकरी पर',
+  testiTitle:'जिन्होंने जॉइन किया', faqTitle:'आम सवाल',
+  empBanT:'टेक्नीशियन या अप्रेंटिस चाहिए?', empBanP:'वेरिफ़ाइड ITI और डिप्लोमा उम्मीदवार, अप्रेंटिसशिप की कागज़ी कार्रवाई हमारी, और 50% तक सरकारी स्टाइपेंड सहायता।',
+  empBanBtn:'नियोक्ता सेवाएँ देखें',
+  findNext:'अपना अगला मौका खोजें', kAll:'सभी', kJobs:'💼 नौकरियाँ', kAppr:'🎓 अप्रेंटिसशिप',
+  searchPh2:'🔍 ट्रेड या कंपनी खोजें…',
+  allCities:'सभी शहर', anySalary:'कोई भी सैलरी', anyEdu:'कोई भी योग्यता', edu10:'10वीं पास', edu12:'12वीं पास', eduITI:'ITI', eduDiploma:'डिप्लोमा', eduNone:'योग्यता ज़रूरी नहीं',
   anyType:'फुल और पार्ट टाइम', tFull:'फुल टाइम', tPart:'पार्ट टाइम', tFlex:'फ्लेक्सिबल',
-  allTrades:'सभी काम', jobsFound:'नौकरियाँ मिलीं', jobFound:'नौकरी मिली',
-  emptyT:'कोई नौकरी नहीं मिली।', emptyP:'कोई फ़िल्टर हटाकर या दूसरा शब्द खोजकर देखें।',
-  backJobs:'← नौकरियों पर वापस', back:'← वापस',
-  lSalary:'सैलरी', lType:'नौकरी का प्रकार', lShift:'शिफ्ट', lExp:'अनुभव', lEdu:'पढ़ाई',
-  whatNeed:'क्या चाहिए', whatGet:'क्या मिलेगा', applyNow:'अभी अप्लाई करें ✓', callEmp:'📞 मालिक को कॉल करें',
-  verifiedEmp:'✓ वेरिफ़ाइड मालिक', callToast:'📞 असली ऐप में यह सीधे मालिक को कॉल करेगा',
+  allTrades:'सभी ट्रेड', jobsFound:'ओपनिंग मिलीं', jobFound:'ओपनिंग मिली',
+  emptyT:'कोई ओपनिंग नहीं मिली।', emptyP:'कोई फ़िल्टर हटाकर या दूसरा शब्द खोजकर देखें।',
+  backJobs:'← ओपनिंग पर वापस', back:'← वापस',
+  lSalary:'सैलरी', lStipend:'स्टाइपेंड', lType:'प्रकार', lShift:'शिफ्ट', lExp:'अनुभव', lEdu:'योग्यता',
+  apprLabel:'अप्रेंटिसशिप', apprNote:'सरकारी सहायता प्राप्त अप्रेंटिसशिप',
+  apprNoteP:'स्टाइपेंड NAPS/NATS सरकारी योजनाओं से समर्थित है। सफल अप्रेंटिस अक्सर पक्की नौकरी में रख लिए जाते हैं।',
+  whatNeed:'क्या चाहिए', whatGet:'क्या मिलेगा', applyNow:'अभी अप्लाई करें ✓', callEmp:'📞 हमारी टीम से बात करें',
+  verifiedEmp:'✓ वेरिफ़ाइड नियोक्ता', callToast:'📞 लाइव प्लेटफ़ॉर्म में हमारी फ़ील्ड टीम आपको कॉल करती है',
   applyT:'30 सेकंड में अप्लाई करें',
   fName:'आपका नाम', fNamePh:'जैसे: रमेश कुमार',
   fPhone:'मोबाइल नंबर', fPhone2:'मोबाइल नंबर', fPhonePh:'10 अंकों का नंबर',
-  fPhoneHint:'मालिक आपको इसी नंबर पर कॉल करेगा।', fExp:'अनुभव',
-  expOpts:['नया — कोई अनुभव नहीं','1 साल से कम','1 – 3 साल','3 – 5 साल','5+ साल'],
+  fPhoneHint:'वेरिफ़िकेशन पूरा करने के लिए हमारी टीम आपको कॉल करेगी।', fQual:'योग्यता', fExp:'अनुभव',
+  qualOpts:['10वीं पास या कम','12वीं पास','ITI','डिप्लोमा','अन्य'],
+  expOpts:['फ्रेशर — कोई अनुभव नहीं','1 साल से कम','1 – 3 साल','3 – 5 साल','5+ साल'],
   submitApply:'आवेदन भेजें ✓', appSentT:'आवेदन भेज दिया गया!',
-  appSentP:(co,n,p)=>`${co} 24 घंटे में ${n} को ${p} पर कॉल करेगा।`,
-  findMore:'और नौकरियाँ देखें',
-  empHeroA:'कुशल वर्कर हायर करें,', empHeroB:'तेज़ी से।', empHeroSub:'2 मिनट में नौकरी पोस्ट करें। अपने शहर के वेरिफ़ाइड वर्करों के कॉल पाएँ।',
-  statWorkers2:'रजिस्टर्ड वर्कर', statTrades:'तरह के काम', statTime:'पहले आवेदन का औसत समय', statCost:'पोस्ट करने का खर्च',
-  whyEmp:'मालिक कामसेतु क्यों चुनते हैं',
-  e1t:'वेरिफ़ाइड प्रोफ़ाइल', e1p:'हर वर्कर का नंबर OTP से वेरिफ़ाई होता है, तभी वह अप्लाई कर सकता है।',
-  e2t:'सीधी बात, कोई दलाल नहीं', e2p:'आवेदक अपना नंबर देते हैं — आप सीधे कॉल करके हायर करें। कोई कमीशन नहीं।',
-  e3t:'सिर्फ़ लोकल उम्मीदवार', e3p:'आपकी नौकरी सिर्फ़ आपके शहर के वर्करों को दिखती है, ताकि वे सच में जॉइन कर सकें।',
-  postT:'नौकरी पोस्ट करें — फ्री', postSub:'एक बार भरें। वर्कर आपको कॉल करेंगे या सीधे अप्लाई करेंगे।',
-  pTitle:'नौकरी का नाम', pTitlePh:'जैसे: एसी टेक्नीशियन', pCat:'काम / श्रेणी', pCo:'कंपनी / दुकान का नाम', pCoPh:'जैसे: शर्मा इलेक्ट्रिकल्स',
-  pCity:'शहर', pCityPh:'जैसे: पुणे', pSal:'महीने की सैलरी (₹)', pPhone:'संपर्क नंबर', publish:'नौकरी पब्लिश करें ✓',
-  liveT:'नौकरी लाइव है!', liveP:'आपकी नौकरी अब आपके शहर के वर्करों को दिख रही है। यह लिस्ट में सबसे ऊपर है।', viewList:'लिस्ट में देखें',
-  loginT:'लॉगिन / साइन अप', loginSub:'नौकरी और हायरिंग के लिए एक खाता। पासवर्ड नहीं — सिर्फ़ OTP।',
-  roleWorker:'👷 वर्कर', roleEmployer:'🏢 मालिक', getOtp:'OTP भेजें →', otpNote:'डेमो मोड: कोई भी 4 अंक OTP की तरह डालें।',
+  appSentP:(co,n,p)=>`हमारी टीम ${n} को ${p} पर कॉल करके जानकारी वेरिफ़ाई करेगी, फिर ${co} से जोड़ेगी।`,
+  findMore:'और ओपनिंग देखें',
+  empHeroA:'वेरिफ़ाइड टेक्नीशियन हायर करें,', empHeroB:'रिज़्यूमे नहीं।',
+  empHeroSub:'पूरे भारत के ज़िलों से ITI और डिप्लोमा उम्मीदवार, प्रैक्टिकल जाँच के साथ। इंटरव्यू, अप्रेंटिसशिप कागज़ात और रिटेंशन फ़ॉलो-अप हम संभालते हैं।',
+  statVerified:'वेरिफ़ाइड सक्रिय उम्मीदवार', statTrades:'औद्योगिक ट्रेड', statRet:'90-दिन रिटेंशन', statRepeat:'नियोक्ता दोबारा हायर करते हैं',
+  postBtn:'वैकेंसी पोस्ट करें — फ्री',
+  schemeT:'अप्रेंटिस रखने पर सरकारी सहायता',
+  sch1t:'NAPS — स्टाइपेंड रीइम्बर्समेंट', sch1p:'नेशनल अप्रेंटिसशिप प्रमोशन स्कीम ट्रेड अप्रेंटिस के निर्धारित स्टाइपेंड का हिस्सा वापस करती है (सीमा लागू)।',
+  sch2t:'NATS — डिप्लोमा और ग्रेजुएट अप्रेंटिस के लिए', sch2p:'NATS 2.0 के तहत सरकार निर्धारित न्यूनतम स्टाइपेंड का लगभग आधा प्रतिष्ठान को वापस करती है।',
+  sch3t:'राज्य टॉप-अप और रोज़गार प्रोत्साहन', sch3p:'कई राज्य मासिक स्टाइपेंड टॉप-अप और रोज़गार-आधारित प्रोत्साहन देते हैं। आप पर क्या लागू होता है — हम पता करते हैं और कागज़ी कार्रवाई संभालते हैं।',
+  schemeFine:'सांकेतिक आँकड़े सार्वजनिक जानकारी पर आधारित। पात्रता, दरें और अवधि लिखित पुष्टि के बाद ही मानें।',
+  whyEmp:'नियोक्ता भारत स्किललिंक क्यों चुनते हैं',
+  e1t:'प्रैक्टिकल जाँच वाले उम्मीदवार', e1p:'संस्थान से सर्टिफ़िकेट वेरिफ़ाई, साथ में छोटा प्रैक्टिकल टेस्ट — आप उन्हीं का इंटरव्यू लेते हैं जो सच में काम जानते हैं।',
+  e2t:'कम गैरहाज़िरी, कम छोड़ना', e2p:'सच्ची जॉब जानकारी, आने-जाने में मदद और 90-दिन फ़ॉलो-अप — जो जॉइन करता है, वह टिकता है।',
+  e3t:'अप्रेंटिसशिप कंप्लायंस हमारा', e3p:'NAPS/NATS और राज्य योजनाओं के तहत कॉन्ट्रैक्ट, पोर्टल रजिस्ट्रेशन और स्टाइपेंड क्लेम — सब हम संभालते हैं।',
+  postT:'वैकेंसी पोस्ट करें — फ्री', postSub:'वैकेंसी लाइव होने से पहले हमारी टीम हर नियोक्ता को वेरिफ़ाई करती है।',
+  pKind:'ओपनिंग का प्रकार', pKindJob:'नौकरी', pKindAppr:'अप्रेंटिसशिप',
+  pTitle:'पद का नाम', pTitlePh:'जैसे: CNC मशीन ऑपरेटर', pCat:'ट्रेड', pCo:'कंपनी का नाम', pCoPh:'जैसे: प्रिसिज़न ऑटो कंपोनेंट्स',
+  pCity:'शहर / औद्योगिक क्लस्टर', pCityPh:'जैसे: पुणे', pSal:'मासिक सैलरी / स्टाइपेंड (₹)', pPhone:'संपर्क नंबर', publish:'वेरिफ़िकेशन के लिए भेजें ✓',
+  liveT:'वैकेंसी भेज दी गई!', liveP:'लाइव प्लेटफ़ॉर्म में पहले हमारी टीम आपके प्रतिष्ठान को वेरिफ़ाई करती है। इस डेमो में आपकी वैकेंसी ओपनिंग लिस्ट में सबसे ऊपर दिख रही है।', viewList:'ओपनिंग लिस्ट देखें',
+  loginT:'लॉगिन / साइन अप', loginSub:'एक खाता। पासवर्ड नहीं — सिर्फ़ OTP।',
+  roleWorker:'👷 उम्मीदवार', roleEmployer:'🏢 नियोक्ता', getOtp:'OTP भेजें →', otpNote:'डेमो मोड: कोई भी 4 अंक OTP की तरह डालें।',
   enterOtp:'OTP डालें', verify:'वेरिफ़ाई करें ✓',
-  loggedIn:r=>`${r==='worker'?'वर्कर':'मालिक'} के रूप में लॉगिन हो गए ✓`,
+  loggedIn:r=>`${r==='worker'?'उम्मीदवार':'नियोक्ता'} के रूप में लॉगिन हो गए ✓`,
   vName:'कृपया अपना नाम लिखें', vPhone:'कृपया सही 10 अंकों का मोबाइल नंबर डालें', vOtp:'कृपया 4 अंकों का OTP डालें',
-  vTitle:'कृपया नौकरी का नाम लिखें', vCo:'कृपया कंपनी / दुकान का नाम लिखें', vCity:'कृपया शहर लिखें', vSal:'कृपया सही सैलरी लिखें',
-  footer:'वर्कर और मालिक को सीधे जोड़ता है। वर्करों के लिए हमेशा फ्री।',
+  vTitle:'कृपया पद का नाम लिखें', vCo:'कृपया कंपनी का नाम लिखें', vCity:'कृपया शहर लिखें', vSal:'कृपया सही सैलरी लिखें',
+  footer:'वेरिफ़ाइड हुनर, असली औद्योगिक माँग से जुड़ा। उम्मीदवारों के लिए हमेशा फ्री।',
+  footerFine:'डेमो प्रोटोटाइप। दिखाए गए आँकड़े कॉन्सेप्ट नोट के पायलट लक्ष्य हैं, लाइव आँकड़े नहीं।',
   faqs:[
-    ['क्या कामसेतु वर्करों के लिए फ्री है?','हाँ, 100% फ्री। खोजने, अप्लाई करने या नौकरी पाने का कोई पैसा नहीं। हम वर्करों से कभी पैसे नहीं माँगते।'],
-    ['क्या रिज़्यूमे या ईमेल चाहिए?','नहीं। सिर्फ़ नाम और मोबाइल नंबर चाहिए। मालिक सीधे आपको कॉल करता है।'],
-    ['क्या नौकरियाँ असली और वेरिफ़ाइड हैं?','✓ वेरिफ़ाइड बैज वाले मालिकों ने अपनी पहचान की पुष्टि की है। नौकरी के बदले पैसे माँगने वाले को कभी पैसे न दें।'],
-    ['मैं सिर्फ़ 10वीं पास हूँ, क्या नौकरी मिलेगी?','कई नौकरियों में डिग्री की ज़रूरत नहीं। पढ़ाई वाले फ़िल्टर से 10वीं पास, 12वीं पास या बिना पढ़ाई की नौकरियाँ देखें।'],
-    ['मालिक नौकरी कैसे पोस्ट करें?','"नौकरी पोस्ट करें" दबाएँ, एक छोटा फ़ॉर्म भरें, और नौकरी फ्री में लाइव। वर्कर सीधे आपको कॉल करेंगे।'],
+    ['क्या भारत स्किललिंक उम्मीदवारों के लिए फ्री है?','हाँ, पूरी तरह फ्री। रजिस्ट्रेशन, मैचिंग या जॉइनिंग का कोई पैसा नहीं — और हम आपका डेटा कभी नहीं बेचते। नियोक्ता हमारी सेवाओं का भुगतान करते हैं।'],
+    ['क्या रिज़्यूमे चाहिए?','नहीं। आपकी वेरिफ़ाइड प्रोफ़ाइल — ट्रेड, सर्टिफ़िकेट, टेस्ट और पसंद — यही आपका रिज़्यूमे है। सिर्फ़ फ़ोन नंबर से रजिस्टर करें।'],
+    ['अप्रेंटिसशिप क्या है? क्या स्टाइपेंड सच में मिलता है?','अप्रेंटिसशिप सरकारी-रजिस्टर्ड कॉन्ट्रैक्ट (NAPS/NATS) के तहत पगार वाली ऑन-जॉब ट्रेनिंग है। सीखते हुए मासिक स्टाइपेंड मिलता है, और कई अप्रेंटिस पक्की नौकरी में रख लिए जाते हैं।'],
+    ['मैं गाँव से हूँ — नए शहर में कैसे रहूँगा?','फ़ैसले से पहले हम पूरी जानकारी देते हैं: सैलरी, कटौती, शिफ्ट, रहना और आना-जाना। हमारी टीम यात्रा और जॉइनिंग में साथ देती है, और पहले 90 दिन फ़ॉलो-अप करती है।'],
+    ['मैं सिर्फ़ 10वीं पास हूँ। क्या मेरे लिए कुछ है?','हाँ। कई ऑपरेटर और हेल्पर पदों के लिए 10वीं पास या कम काफ़ी है। योग्यता फ़िल्टर से देखें।'],
+    ['नियोक्ता उम्मीदवारों को कैसे वेरिफ़ाई करते हैं?','हम संस्थान के सर्टिफ़िकेट जाँचते हैं, ट्रेड का प्रैक्टिकल टेस्ट लेते हैं और पहचान वेरिफ़ाई करते हैं — प्रोफ़ाइल दिखने से पहले।'],
   ],
   testis:[
-    ['🧔','रमेश कुमार','ड्राइवर, मुंबई','सिर्फ़ फ़ोन नंबर से अप्लाई किया और उसी शाम कॉल आ गया। 3 दिन में क्विकशिप जॉइन कर लिया।'],
-    ['👩','सुनीता देवी','हाउसकीपिंग, दिल्ली','न एजेंट, न फीस। घर के पास होटल में पार्ट-टाइम काम मिला। सैलरी पहले से साफ़ लिखी थी।'],
-    ['👨','आरिफ़ शेख','एसी टेक्नीशियन, मुंबई','हर नौकरी पर सैलरी लिखी है — कोई टाइम वेस्ट नहीं। पिछली नौकरी से ₹4,000 ज़्यादा मिले।'],
+    ['🧑‍🏭','रमेश प्रजापति','फिटर · साणंद में जॉइन किया','मेरी ITI ने रजिस्टर करवाया। स्किललिंक ने इंटरव्यू और हॉस्टल तक का इंतज़ाम किया। छह महीने हो गए, सैलरी हर महीने समय पर।'],
+    ['👩‍🏭','कविता मीणा','असेंबली ऑपरेटर · पुणे में जॉइन किया','नए शहर जाने से डर लगता था। हाँ कहने से पहले टीम ने सब समझाया — सैलरी, कमरा, बस रूट। अब भी हालचाल पूछने कॉल आता है।'],
+    ['🧑‍🔧','सुरेश यादव','CNC अप्रेंटिस · फ़रीदाबाद में जॉइन किया','स्टाइपेंड वाली अप्रेंटिसशिप, और कंपनी ने बाद में रख लिया। साल भर जॉब बोर्ड छानने से कहीं बेहतर।'],
   ],
   types:{'Full time':'फुल टाइम','Part time':'पार्ट टाइम','Flexible':'फ्लेक्सिबल'},
-  shifts:{'Day shift':'दिन की शिफ्ट','Night shift':'रात की शिफ्ट','Split shift':'स्प्लिट शिफ्ट','Rotational':'रोटेशनल','Any shift':'कोई भी शिफ्ट'},
-  edus:{'10th':'10वीं पास','12th':'12वीं पास','none':'पढ़ाई ज़रूरी नहीं','iti':'ITI / डिप्लोमा'},
+  shifts:{'Day shift':'दिन की शिफ्ट','Night shift':'रात की शिफ्ट','Rotational':'रोटेशनल','Any shift':'कोई भी शिफ्ट'},
+  edus:{'10th':'10वीं पास','12th':'12वीं पास','iti':'ITI','diploma':'डिप्लोमा','none':'योग्यता ज़रूरी नहीं'},
 }
 };
 
@@ -618,43 +691,60 @@ const tType = v => I18N[LANG].types[v] || v;
 const tShift = v => I18N[LANG].shifts[v] || v;
 const tEdu = v => I18N[LANG].edus[v] || v;
 
-/* ---------------- data ---------------- */
+/* ---------------- trades ---------------- */
 const CATS = [
-  {id:'driver',    name:'Driver',        hi:'ड्राइवर',        ico:'🚗'},
-  {id:'electric',  name:'Electrician',   hi:'इलेक्ट्रीशियन',  ico:'⚡'},
-  {id:'plumber',   name:'Plumber',       hi:'प्लंबर',         ico:'🔧'},
-  {id:'delivery',  name:'Delivery',      hi:'डिलीवरी',        ico:'📦'},
-  {id:'security',  name:'Security',      hi:'सिक्योरिटी गार्ड', ico:'🛡️'},
-  {id:'cook',      name:'Cook',          hi:'कुक / रसोइया',    ico:'🍳'},
-  {id:'tailor',    name:'Tailor',        hi:'दर्ज़ी',          ico:'🧵'},
-  {id:'welder',    name:'Welder',        hi:'वेल्डर',          ico:'🔥'},
-  {id:'carpenter', name:'Carpenter',     hi:'बढ़ई',            ico:'🪚'},
-  {id:'actech',    name:'AC Technician', hi:'एसी टेक्नीशियन',  ico:'❄️'},
-  {id:'housekeep', name:'Housekeeping',  hi:'हाउसकीपिंग',      ico:'🧹'},
-  {id:'helper',    name:'Helper',        hi:'हेल्पर',          ico:'💪'},
+  {id:'fitter',    name:'Fitter',            hi:'फिटर',              ico:'🔩'},
+  {id:'electric',  name:'Electrician',       hi:'इलेक्ट्रीशियन',      ico:'⚡'},
+  {id:'welder',    name:'Welder',            hi:'वेल्डर',             ico:'🔥'},
+  {id:'cnc',       name:'CNC / Machine Op.', hi:'CNC ऑपरेटर',        ico:'🏭'},
+  {id:'rac',       name:'RAC Technician',    hi:'RAC टेक्नीशियन',     ico:'❄️'},
+  {id:'maint',     name:'Maintenance Tech.', hi:'मेंटेनेंस टेक्नीशियन', ico:'🔧'},
+  {id:'quality',   name:'Quality Inspector', hi:'क्वालिटी इंस्पेक्टर',  ico:'🔍'},
+  {id:'assembly',  name:'Assembly Operator', hi:'असेंबली ऑपरेटर',     ico:'⚙️'},
+  {id:'warehouse', name:'Warehouse Tech.',   hi:'वेयरहाउस टेक्नीशियन', ico:'📦'},
+  {id:'driver',    name:'Driver',            hi:'ड्राइवर',            ico:'🚚'},
+  {id:'plumber',   name:'Plumber',           hi:'प्लंबर',             ico:'🚰'},
+  {id:'helper',    name:'Helper',            hi:'हेल्पर',             ico:'💪'},
 ];
 const catName = c => LANG==='hi' ? c.hi : c.name;
 const catSub  = c => LANG==='hi' ? c.name : c.hi;
 
-let JOBS = [
-  {id:1, cat:'driver',   title:'Delivery Van Driver',      co:'QuickShip Logistics',   city:'Mumbai',    salMin:18000, salMax:24000, type:'Full time', shift:'Day shift', edu:'10th', urgent:true,  verified:true, exp:'1+ yr, LMV licence', benefits:['Weekly payout option','Fuel provided','PF & ESI'], req:['Valid LMV driving licence','Knows Mumbai roads','Smartphone for delivery app']},
-  {id:2, cat:'electric', title:'Electrician — Residential', co:'Sharma Electricals',   city:'Pune',      salMin:16000, salMax:22000, type:'Full time', shift:'Day shift', edu:'iti', urgent:true,  verified:true, exp:'2+ yrs wiring work', benefits:['Tools provided','Overtime pay','Sunday off'], req:['House wiring experience','Own bike preferred','ITI certificate is a plus']},
-  {id:3, cat:'delivery', title:'Bike Delivery Partner',     co:'FoodDash',             city:'Bangalore', salMin:15000, salMax:28000, type:'Flexible',  shift:'Any shift', edu:'none', urgent:false, verified:true, exp:'No experience needed', benefits:['Daily payout','Petrol allowance','Joining bonus ₹2,000'], req:['Own bike + licence','Android phone','Any city area OK']},
-  {id:4, cat:'security', title:'Security Guard — Night',    co:'Falcon Facility Services', city:'Delhi', salMin:14000, salMax:17000, type:'Full time', shift:'Night shift', edu:'10th', urgent:false, verified:true, exp:'Freshers welcome', benefits:['Uniform free','PF & ESI','Yearly bonus'], req:['Height 5\'6" or above','Age 21–45','Basic Hindi']},
-  {id:5, cat:'cook',     title:'Cook — North Indian',       co:'Annapurna Mess',       city:'Pune',      salMin:17000, salMax:21000, type:'Full time', shift:'Split shift', edu:'none', urgent:true, verified:false, exp:'2+ yrs mess/dhaba', benefits:['Food + stay available','Monthly bonus','Weekly off'], req:['Roti, sabzi, dal for 100+ people','Clean cooking habits']},
-  {id:6, cat:'plumber',  title:'Plumber — Site Work',       co:'BuildRight Constructions', city:'Hyderabad', salMin:19000, salMax:25000, type:'Full time', shift:'Day shift', edu:'10th', urgent:false, verified:true, exp:'3+ yrs site experience', benefits:['Site allowance','Overtime pay','Insurance'], req:['CPVC/UPVC fitting','Bathroom fitting work','Can read basic drawings']},
-  {id:7, cat:'actech',   title:'AC Technician',             co:'CoolCare Services',    city:'Mumbai',    salMin:20000, salMax:28000, type:'Full time', shift:'Day shift', edu:'iti', urgent:true,  verified:true, exp:'2+ yrs split AC', benefits:['Bike + petrol given','Incentive per service','Tool kit provided'], req:['Split & window AC service','Gas charging','Customer-friendly behaviour']},
-  {id:8, cat:'welder',   title:'Welder — Fabrication',      co:'Om Steel Works',       city:'Ahmedabad', salMin:18000, salMax:26000, type:'Full time', shift:'Day shift', edu:'10th', urgent:false, verified:true, exp:'Arc & MIG welding', benefits:['Overtime pay','Safety gear provided','Festival bonus'], req:['Arc welding 2+ yrs','Can read job drawings','Grinding & finishing']},
-  {id:9, cat:'housekeep',title:'Housekeeping Staff',        co:'Sunrise Hotel',        city:'Delhi',     salMin:8000,  salMax:11000, type:'Part time', shift:'Day shift', edu:'none', urgent:false, verified:true, exp:'Freshers welcome', benefits:['Food included','Uniform free','Tips extra'], req:['Cleanliness & discipline','Age 18–40']},
-  {id:10,cat:'carpenter',title:'Carpenter — Furniture',     co:'WoodCraft Interiors',  city:'Bangalore', salMin:21000, salMax:30000, type:'Full time', shift:'Day shift', edu:'10th', urgent:true,  verified:true, exp:'3+ yrs modular work', benefits:['High incentives','Tools provided','Weekly off'], req:['Modular furniture fitting','Laminate & edge work','Own basic tools a plus']},
-  {id:11,cat:'driver',   title:'Personal Car Driver',       co:'Mehta Family',         city:'Mumbai',    salMin:20000, salMax:23000, type:'Full time', shift:'Day shift', edu:'10th', urgent:false, verified:false, exp:'5+ yrs, city driving', benefits:['Sunday off','Festival bonus','Meals on duty'], req:['Clean driving record','Automatic + manual','Polite behaviour']},
-  {id:12,cat:'tailor',   title:'Tailor — Ladies Suits',     co:'Meena Boutique',       city:'Delhi',     salMin:9000,  salMax:14000, type:'Part time', shift:'Day shift', edu:'none', urgent:false, verified:true, exp:'2+ yrs stitching', benefits:['Per-piece incentive','Sunday off','AC workshop'], req:['Salwar suit & blouse stitching','Machine + hand finishing']},
-  {id:13,cat:'helper',   title:'Warehouse Helper / Loader', co:'BigBox Warehouse',     city:'Hyderabad', salMin:13500, salMax:16500, type:'Full time', shift:'Rotational', edu:'none', urgent:true, verified:true, exp:'No experience needed', benefits:['Weekly payout','Canteen food ₹20','PF & ESI'], req:['Physically fit','Age 18–40','Can lift 25 kg']},
-  {id:14,cat:'electric', title:'Maintenance Electrician',   co:'Galaxy Mall',          city:'Bangalore', salMin:22000, salMax:26000, type:'Full time', shift:'Rotational', edu:'12th', urgent:false, verified:true, exp:'ITI + 2 yrs', benefits:['PF, ESI, insurance','Yearly increment','Uniform provided'], req:['ITI Electrical','Panel & DB maintenance','Emergency handling']},
+/* ---------------- openings data (embedded fallback) ---------------- */
+const EMBEDDED_JOBS = [
+  {id:1, kind:'job', cat:'fitter', title:'Fitter — Assembly Line', co:'Precision Auto Components', city:'Pune', salMin:17000, salMax:22000, type:'Full time', shift:'Rotational', edu:'iti', urgent:true, verified:true, exp:'ITI Fitter + 1 yr', benefits:['PF, ESI & bonus','Subsidised canteen & bus','Overtime pay'], req:['ITI Fitter certificate','Can read engineering drawings','Willing to work rotational shifts']},
+  {id:2, kind:'job', cat:'cnc', title:'CNC Machine Operator', co:'Shree Gears Pvt Ltd', city:'Rajkot', salMin:19000, salMax:26000, type:'Full time', shift:'Rotational', edu:'iti', urgent:true, verified:true, exp:'2+ yrs CNC turning', benefits:['Production incentive','PF & ESI','Yearly increment'], req:['CNC turning/VMC experience','Own measuring instruments knowledge','Quality-first attitude']},
+  {id:3, kind:'apprenticeship', cat:'cnc', title:'Apprentice — CNC Operator', co:'Bharat Forge Vendor Unit', city:'Faridabad', salMin:9000, salMax:11000, type:'Full time', shift:'Day shift', edu:'iti', urgent:false, verified:true, exp:'Fresher (ITI Machinist/Turner)', benefits:['Govt-registered apprenticeship (NAPS)','Monthly stipend + hostel help','High chance of permanent absorption'], req:['ITI Machinist / Turner','Age 18–25','Ready to relocate']},
+  {id:4, kind:'job', cat:'electric', title:'Maintenance Electrician', co:'Sunrise Textiles Mill', city:'Surat', salMin:18000, salMax:24000, type:'Full time', shift:'Rotational', edu:'iti', urgent:false, verified:true, exp:'ITI + 2 yrs plant work', benefits:['PF, ESI, insurance','Festival bonus','Uniform & tools provided'], req:['ITI Electrical','Motor & panel maintenance','Emergency breakdown handling']},
+  {id:5, kind:'job', cat:'welder', title:'MIG Welder — Fabrication', co:'Om Steel Works', city:'Ahmedabad', salMin:18000, salMax:26000, type:'Full time', shift:'Day shift', edu:'10th', urgent:true, verified:true, exp:'2+ yrs MIG/Arc', benefits:['Overtime pay','Safety gear provided','Festival bonus'], req:['MIG & Arc welding','Can read job drawings','Grinding & finishing']},
+  {id:6, kind:'apprenticeship', cat:'welder', title:'Apprentice — Welder', co:'Larsen Vendor Fabrication', city:'Vadodara', salMin:8500, salMax:10500, type:'Full time', shift:'Day shift', edu:'iti', urgent:false, verified:true, exp:'Fresher (ITI Welder)', benefits:['NAPS-registered contract','Stipend + skill certification','PPE & training provided'], req:['ITI Welder','Age 18–25','Basic safety awareness']},
+  {id:7, kind:'job', cat:'rac', title:'RAC Technician — Service', co:'CoolCare Services', city:'Mumbai', salMin:20000, salMax:28000, type:'Full time', shift:'Day shift', edu:'iti', urgent:true, verified:true, exp:'2+ yrs split AC', benefits:['Bike + fuel given','Incentive per service','Tool kit provided'], req:['Split & window AC service','Gas charging','Customer-friendly behaviour']},
+  {id:8, kind:'job', cat:'quality', title:'Quality Inspector — Machining', co:'Accurate Engineering', city:'Coimbatore', salMin:20000, salMax:27000, type:'Full time', shift:'Day shift', edu:'diploma', urgent:false, verified:true, exp:'Diploma + 2 yrs QC', benefits:['PF & ESI','Learning path to QC lead','Transport allowance'], req:['Vernier, micrometer, gauges','Inspection reports','Diploma in Mechanical preferred']},
+  {id:9, kind:'apprenticeship', cat:'quality', title:'Apprentice — Quality (Diploma)', co:'Tata Vendor Cluster Unit', city:'Pune', salMin:10000, salMax:12000, type:'Full time', shift:'Day shift', edu:'diploma', urgent:false, verified:true, exp:'Fresher (Diploma Mechanical)', benefits:['NATS-registered (approx 50% stipend support to employer)','Structured training plan','Absorption track record'], req:['Diploma Mechanical/Production','Age 18–26','Basic measurement knowledge']},
+  {id:10, kind:'job', cat:'assembly', title:'Assembly Line Operator', co:'Lumina Electronics', city:'Noida', salMin:14000, salMax:17000, type:'Full time', shift:'Rotational', edu:'12th', urgent:true, verified:true, exp:'Freshers welcome', benefits:['Hostel & canteen','PF & ESI','Attendance bonus'], req:['12th pass','Good eyesight & hand skills','Discipline & punctuality']},
+  {id:11, kind:'job', cat:'assembly', title:'Assembly Operator — EV Plant', co:'GreenDrive Mobility', city:'Hosur', salMin:15000, salMax:19000, type:'Full time', shift:'Rotational', edu:'10th', urgent:false, verified:true, exp:'Freshers welcome', benefits:['Free transport','Skill training in EV assembly','PF & ESI'], req:['10th pass','Physically fit','Willing to learn EV basics']},
+  {id:12, kind:'job', cat:'maint', title:'Maintenance Technician', co:'Galaxy Foods Factory', city:'Indore', salMin:19000, salMax:25000, type:'Full time', shift:'Rotational', edu:'iti', urgent:false, verified:true, exp:'ITI + 3 yrs', benefits:['PF, ESI, insurance','Yearly increment','Canteen'], req:['Mechanical & basic electrical','Preventive maintenance','Food-industry hygiene']},
+  {id:13, kind:'job', cat:'warehouse', title:'Warehouse Technician', co:'BigBox Logistics Park', city:'Bhiwandi', salMin:14500, salMax:18000, type:'Full time', shift:'Rotational', edu:'12th', urgent:true, verified:true, exp:'Freshers welcome', benefits:['Weekly payout option','Canteen ₹20 meals','PF & ESI'], req:['12th pass','MHE/forklift training a plus','Physically fit']},
+  {id:14, kind:'job', cat:'driver', title:'Delivery Van Driver', co:'QuickShip Logistics', city:'Delhi', salMin:18000, salMax:24000, type:'Full time', shift:'Day shift', edu:'10th', urgent:false, verified:true, exp:'1+ yr, LMV licence', benefits:['Fuel provided','Weekly payout option','PF & ESI'], req:['Valid LMV licence','Knows city roads','Smartphone for app']},
+  {id:15, kind:'job', cat:'plumber', title:'Plumber — Site Work', co:'BuildRight Constructions', city:'Hyderabad', salMin:19000, salMax:25000, type:'Full time', shift:'Day shift', edu:'10th', urgent:false, verified:true, exp:'3+ yrs site work', benefits:['Site allowance','Overtime pay','Insurance'], req:['CPVC/UPVC fitting','Bathroom fitting work','Can read basic drawings']},
+  {id:16, kind:'apprenticeship', cat:'electric', title:'Apprentice — Electrician', co:'Metro Rail Vendor Unit', city:'Chennai', salMin:9000, salMax:11000, type:'Full time', shift:'Day shift', edu:'iti', urgent:true, verified:true, exp:'Fresher (ITI Electrical)', benefits:['NAPS-registered contract','Stipend + certification','Metro-sector experience'], req:['ITI Electrical','Age 18–25','Safety-first mindset']},
+  {id:17, kind:'job', cat:'helper', title:'Production Helper', co:'Shakti Plastics', city:'Ludhiana', salMin:12500, salMax:15000, type:'Full time', shift:'Rotational', edu:'none', urgent:false, verified:true, exp:'No experience needed', benefits:['Weekly payout','On-job training','PF & ESI'], req:['Physically fit','Age 18–40','Discipline']},
+  {id:18, kind:'job', cat:'rac', title:'RAC Technician — Part Time', co:'HomeServe Appliances', city:'Jaipur', salMin:9000, salMax:14000, type:'Part time', shift:'Day shift', edu:'iti', urgent:false, verified:false, exp:'1+ yr AC service', benefits:['Per-job incentive','Flexible hours','Spares provided'], req:['AC service basics','Own tools preferred','Own bike']},
 ];
+
+let JOBS = [...EMBEDDED_JOBS];
+
+/* Try to load fresh data from jobs.json (works when hosted; falls back silently on file://) */
+fetch('jobs.json').then(r=>r.ok?r.json():null).then(data=>{
+  if(data && Array.isArray(data.openings) && data.openings.length){
+    JOBS = data.openings;
+    renderCats(); renderFeatured();
+    if(currentView==='jobs') renderJobs();
+  }
+}).catch(()=>{});
 
 /* ---------------- state ---------------- */
 let activeCat = '';
+let activeKind = '';
 let currentJob = null;
 let loginRole = 'worker';
 let loggedUser = null;
@@ -699,7 +789,7 @@ function applyLang(){
     el.placeholder = t(el.dataset.i18nPh);
   });
   if(loggedUser) $('login-btn').textContent = loggedUser.label;
-  fillSelects(); fillExp(); fillPostCats();
+  fillSelects(); fillQualExp(); fillPostCats();
   renderCats(); renderFeatured(); renderTestis(); renderFaq();
   if(currentView==='jobs') renderJobs();
   if(currentView==='detail' && currentJob) openJob(currentJob.id, true);
@@ -710,13 +800,14 @@ function renderCats(){
   $('cat-grid').innerHTML = CATS.slice(0,8).map(c=>{
     const n = JOBS.filter(j=>j.cat===c.id).length;
     return `<div class="cat" onclick="pickCat('${c.id}')">
-      <div class="ico">${c.ico}</div><b>${catName(c)}</b><small>${catSub(c)} · ${n} job${n!==1?'s':''}</small>
+      <div class="ico">${c.ico}</div><b>${catName(c)}</b><small>${catSub(c)} · ${n}</small>
     </div>`;
   }).join('');
 }
 
 function jobCard(j){
   const c = catOf(j.cat);
+  const isAppr = j.kind==='apprenticeship';
   return `<div class="job" onclick="openJob(${j.id})">
     <div class="ico">${c.ico}</div>
     <div class="job-main">
@@ -724,7 +815,7 @@ function jobCard(j){
       <div class="co">${j.co} · ${j.city}</div>
       <div class="job-tags">
         <span class="tag sal">${rupee(j.salMin)} – ${rupee(j.salMax)}/mo</span>
-        <span class="tag">${tType(j.type)}</span>
+        ${isAppr?`<span class="tag appr">🎓 ${t('apprLabel')}</span>`:`<span class="tag">${tType(j.type)}</span>`}
         <span class="tag">${tEdu(j.edu)}</span>
         ${j.urgent?`<span class="tag urgent">🔥 ${LANG==='hi'?'तुरंत':'Urgent'}</span>`:''}
         ${j.verified?`<span class="tag verified">✓ ${LANG==='hi'?'वेरिफ़ाइड':'Verified'}</span>`:''}
@@ -758,10 +849,10 @@ function fillSelects(){
   const cities = [...new Set(JOBS.map(j=>j.city))].sort();
   $('city-f').innerHTML = `<option value="">${t('allCities')}</option>` + cities.map(c=>`<option>${c}</option>`).join('');
   $('sal-f').innerHTML = `<option value="0">${t('anySalary')}</option>
-    <option value="15000">₹15,000+</option><option value="20000">₹20,000+</option><option value="25000">₹25,000+</option>`;
+    <option value="10000">₹10,000+</option><option value="15000">₹15,000+</option><option value="20000">₹20,000+</option><option value="25000">₹25,000+</option>`;
   $('edu-f').innerHTML = `<option value="">${t('anyEdu')}</option>
     <option value="none">${t('eduNone')}</option><option value="10th">${t('edu10')}</option>
-    <option value="12th">${t('edu12')}</option><option value="iti">${t('eduITI')}</option>`;
+    <option value="12th">${t('edu12')}</option><option value="iti">${t('eduITI')}</option><option value="diploma">${t('eduDiploma')}</option>`;
   $('type-f').innerHTML = `<option value="">${t('anyType')}</option>
     <option value="Full time">${t('tFull')}</option><option value="Part time">${t('tPart')}</option><option value="Flexible">${t('tFlex')}</option>`;
   $('city-f').value = cityCur; $('sal-f').value = salCur || '0'; $('edu-f').value = eduCur; $('type-f').value = typeCur;
@@ -775,6 +866,13 @@ function renderChips(){
 
 function setCat(id){ activeCat = id; renderJobs(); }
 function pickCat(id){ activeCat = id; go('jobs'); }
+function setKind(k){
+  activeKind = k;
+  $('kind-all').classList.toggle('on', k==='');
+  $('kind-job').classList.toggle('on', k==='job');
+  $('kind-appr').classList.toggle('on', k==='apprenticeship');
+  renderJobs();
+}
 
 function homeSearch(){
   go('jobs');
@@ -791,6 +889,7 @@ function renderJobs(){
   const type = $('type-f').value;
   const list = JOBS.filter(j=>{
     const c = catOf(j.cat);
+    if(activeKind && j.kind!==activeKind) return false;
     if(activeCat && j.cat!==activeCat) return false;
     if(city && j.city!==city) return false;
     if(minSal && j.salMax < minSal) return false;
@@ -809,6 +908,7 @@ function renderJobs(){
 function openJob(id, stay){
   currentJob = JOBS.find(j=>j.id===id);
   const j = currentJob, c = catOf(j.cat);
+  const isAppr = j.kind==='apprenticeship';
   $('detail-body').innerHTML = `
   <div class="detail-card">
     <div class="detail-top">
@@ -819,12 +919,13 @@ function openJob(id, stay){
       </div>
     </div>
     <div class="fact-grid">
-      <div class="fact"><small>${t('lSalary')}</small><b>${rupee(j.salMin)} – ${rupee(j.salMax)}/mo</b></div>
-      <div class="fact"><small>${t('lType')}</small><b>${tType(j.type)}</b></div>
+      <div class="fact"><small>${isAppr?t('lStipend'):t('lSalary')}</small><b>${rupee(j.salMin)} – ${rupee(j.salMax)}/mo</b></div>
+      <div class="fact"><small>${t('lType')}</small><b>${isAppr?`🎓 ${t('apprLabel')}`:tType(j.type)}</b></div>
       <div class="fact"><small>${t('lShift')}</small><b>${tShift(j.shift)}</b></div>
       <div class="fact"><small>${t('lEdu')}</small><b>${tEdu(j.edu)}</b></div>
       <div class="fact"><small>${t('lExp')}</small><b>${j.exp}</b></div>
     </div>
+    ${isAppr?`<div class="stipend-note"><b>🎓 ${t('apprNote')}</b>${t('apprNoteP')}</div>`:''}
     <div class="detail-sec"><h4>${t('whatNeed')}</h4><ul>${j.req.map(r=>`<li>${r}</li>`).join('')}</ul></div>
     <div class="detail-sec"><h4>${t('whatGet')}</h4><ul>${j.benefits.map(b=>`<li>${b}</li>`).join('')}</ul></div>
     <div class="apply-row">
@@ -841,10 +942,12 @@ function startApply(){
 }
 
 /* ---------------- apply ---------------- */
-function fillExp(){
-  const cur = $('a-exp').selectedIndex;
+function fillQualExp(){
+  const qc = $('a-qual').selectedIndex, ec = $('a-exp').selectedIndex;
+  $('a-qual').innerHTML = t('qualOpts').map(o=>`<option>${o}</option>`).join('');
   $('a-exp').innerHTML = t('expOpts').map(o=>`<option>${o}</option>`).join('');
-  if(cur>=0) $('a-exp').selectedIndex = cur;
+  if(qc>=0) $('a-qual').selectedIndex = qc;
+  if(ec>=0) $('a-exp').selectedIndex = ec;
 }
 
 function submitApply(){
@@ -858,7 +961,7 @@ function submitApply(){
   window.scrollTo({top:0});
 }
 
-/* ---------------- post job ---------------- */
+/* ---------------- post vacancy ---------------- */
 function fillPostCats(){
   const cur = $('p-cat').value;
   $('p-cat').innerHTML = CATS.map(c=>`<option value="${c.id}">${c.ico} ${catName(c)}</option>`).join('');
@@ -877,7 +980,7 @@ function submitPost(){
   if(!smin || !smax || smax < smin){ toast(t('vSal')); return; }
   if(!/^[6-9]\d{9}$/.test(phone)){ toast(t('vPhone')); return; }
   JOBS.unshift({
-    id: Date.now(), cat: $('p-cat').value, title, co,
+    id: Date.now(), kind: $('p-kind').value, cat: $('p-cat').value, title, co,
     city: city.charAt(0).toUpperCase()+city.slice(1),
     salMin: smin, salMax: smax, type:'Full time', shift:'Day shift', edu:'none',
     urgent:true, verified:false, exp:'As per discussion',
@@ -923,7 +1026,7 @@ function verifyOtp(){
 }
 
 /* ---------------- init ---------------- */
-fillSelects(); fillExp(); fillPostCats();
+fillSelects(); fillQualExp(); fillPostCats();
 renderCats(); renderFeatured(); renderTestis(); renderFaq();
 </script>
 </body>

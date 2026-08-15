@@ -1,0 +1,474 @@
+{
+ "updated": "2026-08-15",
+ "source": "demo-seed",
+ "openings": [
+  {
+   "id": 1,
+   "kind": "job",
+   "cat": "fitter",
+   "title": "Fitter — Assembly Line",
+   "co": "Precision Auto Components",
+   "city": "Pune",
+   "salMin": 17000,
+   "salMax": 22000,
+   "type": "Full time",
+   "shift": "Rotational",
+   "edu": "iti",
+   "urgent": true,
+   "verified": true,
+   "exp": "ITI Fitter + 1 yr",
+   "benefits": [
+    "PF, ESI & bonus",
+    "Subsidised canteen & bus",
+    "Overtime pay"
+   ],
+   "req": [
+    "ITI Fitter certificate",
+    "Can read engineering drawings",
+    "Willing to work rotational shifts"
+   ]
+  },
+  {
+   "id": 2,
+   "kind": "job",
+   "cat": "cnc",
+   "title": "CNC Machine Operator",
+   "co": "Shree Gears Pvt Ltd",
+   "city": "Rajkot",
+   "salMin": 19000,
+   "salMax": 26000,
+   "type": "Full time",
+   "shift": "Rotational",
+   "edu": "iti",
+   "urgent": true,
+   "verified": true,
+   "exp": "2+ yrs CNC turning",
+   "benefits": [
+    "Production incentive",
+    "PF & ESI",
+    "Yearly increment"
+   ],
+   "req": [
+    "CNC turning/VMC experience",
+    "Own measuring instruments knowledge",
+    "Quality-first attitude"
+   ]
+  },
+  {
+   "id": 3,
+   "kind": "apprenticeship",
+   "cat": "cnc",
+   "title": "Apprentice — CNC Operator",
+   "co": "Bharat Forge Vendor Unit",
+   "city": "Faridabad",
+   "salMin": 9000,
+   "salMax": 11000,
+   "type": "Full time",
+   "shift": "Day shift",
+   "edu": "iti",
+   "urgent": false,
+   "verified": true,
+   "exp": "Fresher (ITI Machinist/Turner)",
+   "benefits": [
+    "Govt-registered apprenticeship (NAPS)",
+    "Monthly stipend + hostel help",
+    "High chance of permanent absorption"
+   ],
+   "req": [
+    "ITI Machinist / Turner",
+    "Age 18–25",
+    "Ready to relocate"
+   ]
+  },
+  {
+   "id": 4,
+   "kind": "job",
+   "cat": "electric",
+   "title": "Maintenance Electrician",
+   "co": "Sunrise Textiles Mill",
+   "city": "Surat",
+   "salMin": 18000,
+   "salMax": 24000,
+   "type": "Full time",
+   "shift": "Rotational",
+   "edu": "iti",
+   "urgent": false,
+   "verified": true,
+   "exp": "ITI + 2 yrs plant work",
+   "benefits": [
+    "PF, ESI, insurance",
+    "Festival bonus",
+    "Uniform & tools provided"
+   ],
+   "req": [
+    "ITI Electrical",
+    "Motor & panel maintenance",
+    "Emergency breakdown handling"
+   ]
+  },
+  {
+   "id": 5,
+   "kind": "job",
+   "cat": "welder",
+   "title": "MIG Welder — Fabrication",
+   "co": "Om Steel Works",
+   "city": "Ahmedabad",
+   "salMin": 18000,
+   "salMax": 26000,
+   "type": "Full time",
+   "shift": "Day shift",
+   "edu": "10th",
+   "urgent": true,
+   "verified": true,
+   "exp": "2+ yrs MIG/Arc",
+   "benefits": [
+    "Overtime pay",
+    "Safety gear provided",
+    "Festival bonus"
+   ],
+   "req": [
+    "MIG & Arc welding",
+    "Can read job drawings",
+    "Grinding & finishing"
+   ]
+  },
+  {
+   "id": 6,
+   "kind": "apprenticeship",
+   "cat": "welder",
+   "title": "Apprentice — Welder",
+   "co": "Larsen Vendor Fabrication",
+   "city": "Vadodara",
+   "salMin": 8500,
+   "salMax": 10500,
+   "type": "Full time",
+   "shift": "Day shift",
+   "edu": "iti",
+   "urgent": false,
+   "verified": true,
+   "exp": "Fresher (ITI Welder)",
+   "benefits": [
+    "NAPS-registered contract",
+    "Stipend + skill certification",
+    "PPE & training provided"
+   ],
+   "req": [
+    "ITI Welder",
+    "Age 18–25",
+    "Basic safety awareness"
+   ]
+  },
+  {
+   "id": 7,
+   "kind": "job",
+   "cat": "rac",
+   "title": "RAC Technician — Service",
+   "co": "CoolCare Services",
+   "city": "Mumbai",
+   "salMin": 20000,
+   "salMax": 28000,
+   "type": "Full time",
+   "shift": "Day shift",
+   "edu": "iti",
+   "urgent": true,
+   "verified": true,
+   "exp": "2+ yrs split AC",
+   "benefits": [
+    "Bike + fuel given",
+    "Incentive per service",
+    "Tool kit provided"
+   ],
+   "req": [
+    "Split & window AC service",
+    "Gas charging",
+    "Customer-friendly behaviour"
+   ]
+  },
+  {
+   "id": 8,
+   "kind": "job",
+   "cat": "quality",
+   "title": "Quality Inspector — Machining",
+   "co": "Accurate Engineering",
+   "city": "Coimbatore",
+   "salMin": 20000,
+   "salMax": 27000,
+   "type": "Full time",
+   "shift": "Day shift",
+   "edu": "diploma",
+   "urgent": false,
+   "verified": true,
+   "exp": "Diploma + 2 yrs QC",
+   "benefits": [
+    "PF & ESI",
+    "Learning path to QC lead",
+    "Transport allowance"
+   ],
+   "req": [
+    "Vernier, micrometer, gauges",
+    "Inspection reports",
+    "Diploma in Mechanical preferred"
+   ]
+  },
+  {
+   "id": 9,
+   "kind": "apprenticeship",
+   "cat": "quality",
+   "title": "Apprentice — Quality (Diploma)",
+   "co": "Tata Vendor Cluster Unit",
+   "city": "Pune",
+   "salMin": 10000,
+   "salMax": 12000,
+   "type": "Full time",
+   "shift": "Day shift",
+   "edu": "diploma",
+   "urgent": false,
+   "verified": true,
+   "exp": "Fresher (Diploma Mechanical)",
+   "benefits": [
+    "NATS-registered (approx 50% stipend support to employer)",
+    "Structured training plan",
+    "Absorption track record"
+   ],
+   "req": [
+    "Diploma Mechanical/Production",
+    "Age 18–26",
+    "Basic measurement knowledge"
+   ]
+  },
+  {
+   "id": 10,
+   "kind": "job",
+   "cat": "assembly",
+   "title": "Assembly Line Operator",
+   "co": "Lumina Electronics",
+   "city": "Noida",
+   "salMin": 14000,
+   "salMax": 17000,
+   "type": "Full time",
+   "shift": "Rotational",
+   "edu": "12th",
+   "urgent": true,
+   "verified": true,
+   "exp": "Freshers welcome",
+   "benefits": [
+    "Hostel & canteen",
+    "PF & ESI",
+    "Attendance bonus"
+   ],
+   "req": [
+    "12th pass",
+    "Good eyesight & hand skills",
+    "Discipline & punctuality"
+   ]
+  },
+  {
+   "id": 11,
+   "kind": "job",
+   "cat": "assembly",
+   "title": "Assembly Operator — EV Plant",
+   "co": "GreenDrive Mobility",
+   "city": "Hosur",
+   "salMin": 15000,
+   "salMax": 19000,
+   "type": "Full time",
+   "shift": "Rotational",
+   "edu": "10th",
+   "urgent": false,
+   "verified": true,
+   "exp": "Freshers welcome",
+   "benefits": [
+    "Free transport",
+    "Skill training in EV assembly",
+    "PF & ESI"
+   ],
+   "req": [
+    "10th pass",
+    "Physically fit",
+    "Willing to learn EV basics"
+   ]
+  },
+  {
+   "id": 12,
+   "kind": "job",
+   "cat": "maint",
+   "title": "Maintenance Technician",
+   "co": "Galaxy Foods Factory",
+   "city": "Indore",
+   "salMin": 19000,
+   "salMax": 25000,
+   "type": "Full time",
+   "shift": "Rotational",
+   "edu": "iti",
+   "urgent": false,
+   "verified": true,
+   "exp": "ITI + 3 yrs",
+   "benefits": [
+    "PF, ESI, insurance",
+    "Yearly increment",
+    "Canteen"
+   ],
+   "req": [
+    "Mechanical & basic electrical",
+    "Preventive maintenance",
+    "Food-industry hygiene"
+   ]
+  },
+  {
+   "id": 13,
+   "kind": "job",
+   "cat": "warehouse",
+   "title": "Warehouse Technician",
+   "co": "BigBox Logistics Park",
+   "city": "Bhiwandi",
+   "salMin": 14500,
+   "salMax": 18000,
+   "type": "Full time",
+   "shift": "Rotational",
+   "edu": "12th",
+   "urgent": true,
+   "verified": true,
+   "exp": "Freshers welcome",
+   "benefits": [
+    "Weekly payout option",
+    "Canteen ₹20 meals",
+    "PF & ESI"
+   ],
+   "req": [
+    "12th pass",
+    "MHE/forklift training a plus",
+    "Physically fit"
+   ]
+  },
+  {
+   "id": 14,
+   "kind": "job",
+   "cat": "driver",
+   "title": "Delivery Van Driver",
+   "co": "QuickShip Logistics",
+   "city": "Delhi",
+   "salMin": 18000,
+   "salMax": 24000,
+   "type": "Full time",
+   "shift": "Day shift",
+   "edu": "10th",
+   "urgent": false,
+   "verified": true,
+   "exp": "1+ yr, LMV licence",
+   "benefits": [
+    "Fuel provided",
+    "Weekly payout option",
+    "PF & ESI"
+   ],
+   "req": [
+    "Valid LMV licence",
+    "Knows city roads",
+    "Smartphone for app"
+   ]
+  },
+  {
+   "id": 15,
+   "kind": "job",
+   "cat": "plumber",
+   "title": "Plumber — Site Work",
+   "co": "BuildRight Constructions",
+   "city": "Hyderabad",
+   "salMin": 19000,
+   "salMax": 25000,
+   "type": "Full time",
+   "shift": "Day shift",
+   "edu": "10th",
+   "urgent": false,
+   "verified": true,
+   "exp": "3+ yrs site work",
+   "benefits": [
+    "Site allowance",
+    "Overtime pay",
+    "Insurance"
+   ],
+   "req": [
+    "CPVC/UPVC fitting",
+    "Bathroom fitting work",
+    "Can read basic drawings"
+   ]
+  },
+  {
+   "id": 16,
+   "kind": "apprenticeship",
+   "cat": "electric",
+   "title": "Apprentice — Electrician",
+   "co": "Metro Rail Vendor Unit",
+   "city": "Chennai",
+   "salMin": 9000,
+   "salMax": 11000,
+   "type": "Full time",
+   "shift": "Day shift",
+   "edu": "iti",
+   "urgent": true,
+   "verified": true,
+   "exp": "Fresher (ITI Electrical)",
+   "benefits": [
+    "NAPS-registered contract",
+    "Stipend + certification",
+    "Metro-sector experience"
+   ],
+   "req": [
+    "ITI Electrical",
+    "Age 18–25",
+    "Safety-first mindset"
+   ]
+  },
+  {
+   "id": 17,
+   "kind": "job",
+   "cat": "helper",
+   "title": "Production Helper",
+   "co": "Shakti Plastics",
+   "city": "Ludhiana",
+   "salMin": 12500,
+   "salMax": 15000,
+   "type": "Full time",
+   "shift": "Rotational",
+   "edu": "none",
+   "urgent": false,
+   "verified": true,
+   "exp": "No experience needed",
+   "benefits": [
+    "Weekly payout",
+    "On-job training",
+    "PF & ESI"
+   ],
+   "req": [
+    "Physically fit",
+    "Age 18–40",
+    "Discipline"
+   ]
+  },
+  {
+   "id": 18,
+   "kind": "job",
+   "cat": "rac",
+   "title": "RAC Technician — Part Time",
+   "co": "HomeServe Appliances",
+   "city": "Jaipur",
+   "salMin": 9000,
+   "salMax": 14000,
+   "type": "Part time",
+   "shift": "Day shift",
+   "edu": "iti",
+   "urgent": false,
+   "verified": false,
+   "exp": "1+ yr AC service",
+   "benefits": [
+    "Per-job incentive",
+    "Flexible hours",
+    "Spares provided"
+   ],
+   "req": [
+    "AC service basics",
+    "Own tools preferred",
+    "Own bike"
+   ]
+  }
+ ]
+}
